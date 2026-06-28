@@ -9,7 +9,8 @@
     "sync:skill": "cp skills/woven-sfx/SKILL.md apps/web/public/skill.md && cp scripts/install.sh apps/web/public/install.sh",
     "seed:sounds": "bash scripts/seed-sounds.sh",
     "update:durations": "tsx scripts/update-durations.ts",
-    "upload:r2": "bash scripts/upload-r2.sh"
+    "upload:r2": "bash scripts/upload-r2.sh",
+    "sync:assets": "mkdir -p apps/web/public/sfx && cp sounds/*.wav apps/web/public/sfx/"
   },
   "devDependencies": {
     "tsx": "^4.19.0",

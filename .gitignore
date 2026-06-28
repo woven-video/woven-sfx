@@ -2,3 +2,4 @@
 node_modules/
 dist/
 .dist/
+apps/web/public/sfx/
