@@ -1,15 +1,22 @@
 import { useState } from "react";
+import { CheckIcon, CopyIcon } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 
 type CopyButtonProps = {
   text: string;
   label: string;
   className?: string;
+  children?: string;
+  variant?: "default" | "icon";
 };
 
 export default function CopyButton({
   text,
   label,
-  className = "",
+  className,
+  children = "Copy id",
+  variant = "default",
 }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
@@ -19,14 +26,31 @@ export default function CopyButton({
     window.setTimeout(() => setCopied(false), 2000);
   }
 
+  if (variant === "icon") {
+    return (
+      <Button
+        type="button"
+        variant="ghost"
+        size="icon-xs"
+        onClick={handleCopy}
+        className={className}
+        aria-label={`Copy ${label}`}
+      >
+        {copied ? <CheckIcon /> : <CopyIcon />}
+      </Button>
+    );
+  }
+
   return (
-    <button
+    <Button
       type="button"
+      variant="secondary"
+      size="sm"
       onClick={handleCopy}
-      className={`shrink-0 rounded-md border border-stone-700 bg-stone-900 px-3 py-1.5 text-xs font-medium text-stone-300 transition-colors hover:border-stone-600 hover:bg-stone-800 hover:text-stone-200 ${className}`}
+      className={className}
       aria-label={`Copy ${label}`}
     >
-      {copied ? "Copied" : "Copy id"}
-    </button>
+      {copied ? "Copied" : children}
+    </Button>
   );
 }

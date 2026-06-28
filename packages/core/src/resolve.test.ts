@@ -11,7 +11,7 @@ const catalog: Catalog = {
       tags: ["whoosh"],
       duration_ms: 680,
       default_volume: 0.45,
-      url: "https://sfx.woven.video/sfx/swish-whoosh-large.wav",
+      url: "https://assets.sfx.woven.video/sfx/swish-whoosh-large.wav",
       pairings: { transition: ["pull-in"] },
     },
     {
@@ -20,7 +20,7 @@ const catalog: Catalog = {
       tags: ["whoosh"],
       duration_ms: 420,
       default_volume: 0.45,
-      url: "https://sfx.woven.video/sfx/fast-whoosh.wav",
+      url: "https://assets.sfx.woven.video/sfx/fast-whoosh.wav",
       pairings: { transition: ["pull-out", "whoosh"] },
     },
   ],

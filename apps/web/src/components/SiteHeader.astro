@@ -1,39 +1,67 @@
 ---
-const navLinks = [
-  { href: "#catalog", label: "Sounds" },
-  { href: "#agents", label: "For agents" },
-  {
-    href: "https://github.com/woven-video/woven-sfx",
-    label: "GitHub",
-    external: true,
-  },
-];
+const externalLinkClass =
+  "inline-flex items-center gap-1 transition-colors hover:text-foreground";
 ---
 
-<header class="border-b border-stone-800">
+<header
+  class="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur"
+>
   <div
-    class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6"
+    class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-3"
   >
-    <a
-      href="/"
-      class="text-lg font-semibold tracking-tight text-stone-200 transition-colors hover:text-white"
-    >
-      Woven SFX
+    <a href="/" class="flex items-center gap-2" aria-label="Woven SFX home">
+      <img
+        src="/woven-logo.png"
+        alt=""
+        width="28"
+        height="28"
+        class="size-7 shrink-0 rounded-md dark:invert"
+      />
+      <span class="font-heading text-base font-medium">Woven SFX</span>
     </a>
-    <nav class="flex items-center gap-5 text-sm">
-      {
-        navLinks.map((link) => (
-          <a
-            href={link.href}
-            class="text-stone-400 transition-colors hover:text-stone-200"
-            {...(link.external
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : {})}
-          >
-            {link.label}
-          </a>
-        ))
-      }
+    <nav class="flex items-center gap-7 text-sm text-muted-foreground">
+      <a
+        href="https://woven.video"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={externalLinkClass}
+      >
+        woven.video
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="size-3.5"
+        >
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/woven-video/woven-sfx"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={externalLinkClass}
+      >
+        GitHub
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="size-3.5"
+        >
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
+      </a>
     </nav>
   </div>
 </header>

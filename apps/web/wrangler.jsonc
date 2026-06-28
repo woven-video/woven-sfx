@@ -12,11 +12,5 @@
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "404-page"
-  },
-  "r2_buckets": [
-    {
-      "bucket_name": "woven-sfx",
-      "binding": "SFX_BUCKET"
-    }
-  ]
+  }
 }

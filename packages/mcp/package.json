@@ -23,11 +23,11 @@
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.0.0-alpha.3",
-    "@woven-sfx/core": "workspace:*",
     "zod": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "@woven-sfx/core": "workspace:*",
     "esbuild": "^0.25.0",
     "typescript": "^5.8.0"
   },

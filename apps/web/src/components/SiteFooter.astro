@@ -1,28 +1,89 @@
 ---
-import catalog from "../../public/catalog.json";
+const externalLinkClass =
+  "inline-flex items-center gap-1 transition-colors hover:text-foreground";
 ---
 
-<footer class="border-t border-stone-800">
+<footer class="border-t border-border/60">
   <div
-    class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-stone-500 sm:flex-row sm:items-center sm:justify-between sm:px-6"
+    class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between"
   >
-    <p>
-      <span class="text-stone-400">MIT</span> · <span class="text-stone-400"
-        >CC0</span
-      >
-      sounds
-    </p>
-    <p class="flex flex-wrap items-center gap-x-3 gap-y-1">
+    <div class="flex items-center gap-3">
+      <img
+        src="/woven-logo.png"
+        alt="Woven"
+        width="100"
+        height="28"
+        class="h-5 w-auto dark:invert"
+      />
+      <span class="font-medium text-foreground">Woven SFX</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-6">
       <a
         href="https://woven.video"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-stone-400 transition-colors hover:text-stone-200"
+        class={externalLinkClass}
       >
         woven.video
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="size-3.5"
+        >
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
       </a>
-      <span aria-hidden="true" class="text-stone-600">·</span>
-      <span>catalog v{catalog.version}</span>
-    </p>
+      <a
+        href="https://www.skills.sh/woven-video/skills/woven-sfx"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={externalLinkClass}
+      >
+        skills.sh
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="size-3.5"
+        >
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
+      </a>
+      <a
+        href="https://github.com/woven-video/woven-sfx"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={externalLinkClass}
+      >
+        GitHub
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="size-3.5"
+        >
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
+      </a>
+      <a href="/catalog.json" class="hover:text-foreground">catalog.json</a>
+      <a href="/llms.txt" class="hover:text-foreground">llms.txt</a>
+      <a href="/install.sh" class="hover:text-foreground">install.sh</a>
+    </div>
   </div>
 </footer>

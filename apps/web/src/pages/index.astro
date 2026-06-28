@@ -1,31 +1,28 @@
 ---
 import "../styles/global.css";
+import SeoHead from "../components/SeoHead.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import Hero from "../components/Hero.astro";
 import CatalogSection from "../components/CatalogSection.tsx";
-import AgentDocsStrip from "../components/AgentDocsStrip.astro";
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>woven-sfx — Sound effects for AI agents</title>
-    <meta
-      name="description"
-      content="Agent skill + MCP tools for whooshes, pops, and glitches in video edits. Install with npx skills add."
-    />
+    <meta name="theme-color" content="#252525" />
+    <meta name="color-scheme" content="dark" />
+    <SeoHead />
   </head>
-  <body class="min-h-screen bg-stone-950 text-stone-200 antialiased">
+  <body class="flex min-h-screen flex-col bg-background text-foreground antialiased">
     <SiteHeader />
-    <main>
+    <main class="flex-1">
       <Hero />
       <CatalogSection client:load />
-      <AgentDocsStrip />
     </main>
     <SiteFooter />
   </body>

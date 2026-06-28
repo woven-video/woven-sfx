@@ -8,7 +8,7 @@
     "generate:peaks": "tsx scripts/generate-peaks.ts",
     "sync:skill": "cp skills/woven-sfx/SKILL.md apps/web/public/skill.md && cp scripts/install.sh apps/web/public/install.sh",
     "sync:skills-repo": "bash scripts/sync-skills-repo.sh",
-    "sync:sounds": "bash scripts/sync-sounds.sh",
+    "r2:cors": "pnpm --dir apps/web exec wrangler r2 bucket cors set woven-sfx --file ../../scripts/r2-cors.json",
     "seed:sounds": "bash scripts/seed-sounds.sh",
     "update:durations": "tsx scripts/update-durations.ts",
     "upload:r2": "bash scripts/upload-r2.sh",

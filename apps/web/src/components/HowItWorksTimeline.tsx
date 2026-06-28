@@ -1,8 +1,17 @@
+import { cn } from "@/lib/utils";
+
 const steps = [
   {
     title: "Install skill",
     description:
-      "npx skills add woven-video/skills --skill woven-sfx — agent gets woven-sfx workflow",
+      "npx skills add woven-video/skills --skill woven-sfx — workflow lands in ~/.agents/skills/woven-sfx/",
+    code: false,
+  },
+  {
+    title: "Add MCP server",
+    description:
+      "Paste config into Cursor, Claude Code, or Claude Desktop — required for sfx_* tools",
+    code: false,
   },
   {
     title: "Agent resolves a sound",
@@ -11,12 +20,65 @@ const steps = [
   },
   {
     title: "File lands locally",
-    description: "Sound file cached in ./sounds/sfx/",
+    description: "./sounds/sfx/ (or your sfx-library path)",
     code: true,
   },
 ] as const;
 
-export default function HowItWorksTimeline() {
+const paths = [
+  { label: "Skill", value: "~/.agents/skills/woven-sfx/" },
+  { label: "MCP", value: "woven-sfx-mcp" },
+  { label: "Sounds", value: "./sounds/sfx/" },
+] as const;
+
+export default function HowItWorksTimeline({
+  compact = false,
+}: {
+  compact?: boolean;
+}) {
+  if (compact) {
+    return (
+      <div className="flex flex-col gap-4">
+        <ul className="space-y-3">
+          {steps.map((step) => (
+            <li key={step.title} className="min-w-0">
+              <p className="text-sm font-medium text-foreground">{step.title}</p>
+              {step.code ? (
+                <p className="mt-0.5 font-mono text-xs text-muted-foreground">
+                  {step.description}
+                </p>
+              ) : (
+                <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+                  {step.description}
+                </p>
+              )}
+            </li>
+          ))}
+        </ul>
+
+        <dl className="grid grid-cols-[3.25rem_1fr] gap-x-3 gap-y-1.5 border-t border-border/60 pt-4 text-xs">
+          {paths.map((item) => (
+            <div key={item.label} className="contents">
+              <dt className="text-muted-foreground">{item.label}</dt>
+              <dd className="font-mono text-foreground">{item.value}</dd>
+            </div>
+          ))}
+          <dt className="text-muted-foreground">Registry</dt>
+          <dd>
+            <a
+              href="https://www.skills.sh/woven-video/skills/woven-sfx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              skills.sh
+            </a>
+          </dd>
+        </dl>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-4">
       <ol className="relative space-y-5">
@@ -30,7 +92,9 @@ export default function HowItWorksTimeline() {
             ) : null}
 
             <span
-              className="relative z-10 flex size-6 shrink-0 items-center justify-center rounded-full bg-muted font-mono text-[10px] font-medium text-muted-foreground ring-1 ring-border"
+              className={cn(
+                "relative z-10 flex size-6 shrink-0 items-center justify-center rounded-full bg-muted font-mono text-[10px] font-medium text-muted-foreground ring-1 ring-border",
+              )}
               aria-hidden="true"
             >
               {index + 1}
@@ -56,12 +120,23 @@ export default function HowItWorksTimeline() {
 
       <div className="border-t border-border/60 pt-4">
         <dl className="grid grid-cols-[3.25rem_1fr] gap-x-3 gap-y-2 text-sm">
-          <dt className="text-muted-foreground">Skill</dt>
-          <dd className="font-mono text-foreground">
-            ~/.agents/skills/woven-sfx/
+          {paths.map((item) => (
+            <div key={item.label} className="contents">
+              <dt className="text-muted-foreground">{item.label}</dt>
+              <dd className="font-mono text-foreground">{item.value}</dd>
+            </div>
+          ))}
+          <dt className="text-muted-foreground">Registry</dt>
+          <dd>
+            <a
+              href="https://www.skills.sh/woven-video/skills/woven-sfx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              skills.sh
+            </a>
           </dd>
-          <dt className="text-muted-foreground">Sounds</dt>
-          <dd className="font-mono text-foreground">./sounds/sfx/</dd>
         </dl>
       </div>
     </div>

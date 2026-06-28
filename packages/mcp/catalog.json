@@ -10,8 +10,8 @@
       ],
       "default_volume": 0.4,
       "file": "airplane-ding.wav",
-      "url": "https://sfx.woven.video/sfx/airplane-ding.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/airplane-ding.json"
+      "url": "https://assets.sfx.woven.video/sfx/airplane-ding.wav",
+      "peaks_url": "/peaks/airplane-ding.json"
     },
     {
       "id": "applause",
@@ -22,8 +22,8 @@
       ],
       "default_volume": 0.45,
       "file": "applause.wav",
-      "url": "https://sfx.woven.video/sfx/applause.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/applause.json"
+      "url": "https://assets.sfx.woven.video/sfx/applause.wav",
+      "peaks_url": "/peaks/applause.json"
     },
     {
       "id": "base-drop",
@@ -34,8 +34,8 @@
       ],
       "default_volume": 0.55,
       "file": "base-drop.wav",
-      "url": "https://sfx.woven.video/sfx/base-drop.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/base-drop.json"
+      "url": "https://assets.sfx.woven.video/sfx/base-drop.wav",
+      "peaks_url": "/peaks/base-drop.json"
     },
     {
       "id": "bass-impact",
@@ -46,8 +46,8 @@
       ],
       "default_volume": 0.55,
       "file": "bass-impact.wav",
-      "url": "https://sfx.woven.video/sfx/bass-impact.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/bass-impact.json"
+      "url": "https://assets.sfx.woven.video/sfx/bass-impact.wav",
+      "peaks_url": "/peaks/bass-impact.json"
     },
     {
       "id": "beep-short",
@@ -57,8 +57,8 @@
       ],
       "default_volume": 0.35,
       "file": "beep-short.wav",
-      "url": "https://sfx.woven.video/sfx/beep-short.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/beep-short.json"
+      "url": "https://assets.sfx.woven.video/sfx/beep-short.wav",
+      "peaks_url": "/peaks/beep-short.json"
     },
     {
       "id": "camera-analog",
@@ -69,8 +69,8 @@
       ],
       "default_volume": 0.4,
       "file": "camera-analog.wav",
-      "url": "https://sfx.woven.video/sfx/camera-analog.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/camera-analog.json"
+      "url": "https://assets.sfx.woven.video/sfx/camera-analog.wav",
+      "peaks_url": "/peaks/camera-analog.json"
     },
     {
       "id": "camera-flash",
@@ -86,8 +86,8 @@
         ]
       },
       "file": "camera-flash.wav",
-      "url": "https://sfx.woven.video/sfx/camera-flash.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/camera-flash.json"
+      "url": "https://assets.sfx.woven.video/sfx/camera-flash.wav",
+      "peaks_url": "/peaks/camera-flash.json"
     },
     {
       "id": "camera-shutter-1-shot",
@@ -98,8 +98,8 @@
       ],
       "default_volume": 0.4,
       "file": "camera-shutter-1-shot.wav",
-      "url": "https://sfx.woven.video/sfx/camera-shutter-1-shot.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/camera-shutter-1-shot.json"
+      "url": "https://assets.sfx.woven.video/sfx/camera-shutter-1-shot.wav",
+      "peaks_url": "/peaks/camera-shutter-1-shot.json"
     },
     {
       "id": "camera-shutter-8-shots",
@@ -110,8 +110,8 @@
       ],
       "default_volume": 0.4,
       "file": "camera-shutter-8-shots.wav",
-      "url": "https://sfx.woven.video/sfx/camera-shutter-8-shots.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/camera-shutter-8-shots.json"
+      "url": "https://assets.sfx.woven.video/sfx/camera-shutter-8-shots.wav",
+      "peaks_url": "/peaks/camera-shutter-8-shots.json"
     },
     {
       "id": "camera-shutter-release",
@@ -122,8 +122,8 @@
       ],
       "default_volume": 0.4,
       "file": "camera-shutter-release.wav",
-      "url": "https://sfx.woven.video/sfx/camera-shutter-release.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/camera-shutter-release.json"
+      "url": "https://assets.sfx.woven.video/sfx/camera-shutter-release.wav",
+      "peaks_url": "/peaks/camera-shutter-release.json"
     },
     {
       "id": "cheers-and-applause",
@@ -135,8 +135,8 @@
       ],
       "default_volume": 0.45,
       "file": "cheers-and-applause.wav",
-      "url": "https://sfx.woven.video/sfx/cheers-and-applause.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/cheers-and-applause.json"
+      "url": "https://assets.sfx.woven.video/sfx/cheers-and-applause.wav",
+      "peaks_url": "/peaks/cheers-and-applause.json"
     },
     {
       "id": "deep-whoosh",
@@ -152,8 +152,8 @@
         ]
       },
       "file": "deep-whoosh.wav",
-      "url": "https://sfx.woven.video/sfx/deep-whoosh.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/deep-whoosh.json"
+      "url": "https://assets.sfx.woven.video/sfx/deep-whoosh.wav",
+      "peaks_url": "/peaks/deep-whoosh.json"
     },
     {
       "id": "dj-scratch",
@@ -169,8 +169,8 @@
         ]
       },
       "file": "dj-scratch.wav",
-      "url": "https://sfx.woven.video/sfx/dj-scratch.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/dj-scratch.json"
+      "url": "https://assets.sfx.woven.video/sfx/dj-scratch.wav",
+      "peaks_url": "/peaks/dj-scratch.json"
     },
     {
       "id": "dull-thud",
@@ -181,8 +181,8 @@
       ],
       "default_volume": 0.5,
       "file": "dull-thud.wav",
-      "url": "https://sfx.woven.video/sfx/dull-thud.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/dull-thud.json"
+      "url": "https://assets.sfx.woven.video/sfx/dull-thud.wav",
+      "peaks_url": "/peaks/dull-thud.json"
     },
     {
       "id": "elevator-ding",
@@ -192,8 +192,8 @@
       ],
       "default_volume": 0.4,
       "file": "elevator-ding.wav",
-      "url": "https://sfx.woven.video/sfx/elevator-ding.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/elevator-ding.json"
+      "url": "https://assets.sfx.woven.video/sfx/elevator-ding.wav",
+      "peaks_url": "/peaks/elevator-ding.json"
     },
     {
       "id": "explosion",
@@ -204,8 +204,8 @@
       ],
       "default_volume": 0.45,
       "file": "explosion.wav",
-      "url": "https://sfx.woven.video/sfx/explosion.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/explosion.json"
+      "url": "https://assets.sfx.woven.video/sfx/explosion.wav",
+      "peaks_url": "/peaks/explosion.json"
     },
     {
       "id": "fast-whoosh",
@@ -222,8 +222,8 @@
         ]
       },
       "file": "fast-whoosh.wav",
-      "url": "https://sfx.woven.video/sfx/fast-whoosh.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/fast-whoosh.json"
+      "url": "https://assets.sfx.woven.video/sfx/fast-whoosh.wav",
+      "peaks_url": "/peaks/fast-whoosh.json"
     },
     {
       "id": "female-gasp",
@@ -235,8 +235,8 @@
       ],
       "default_volume": 0.4,
       "file": "female-gasp.wav",
-      "url": "https://sfx.woven.video/sfx/female-gasp.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/female-gasp.json"
+      "url": "https://assets.sfx.woven.video/sfx/female-gasp.wav",
+      "peaks_url": "/peaks/female-gasp.json"
     },
     {
       "id": "frog-ribbit",
@@ -247,8 +247,8 @@
       ],
       "default_volume": 0.35,
       "file": "frog-ribbit.wav",
-      "url": "https://sfx.woven.video/sfx/frog-ribbit.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/frog-ribbit.json"
+      "url": "https://assets.sfx.woven.video/sfx/frog-ribbit.wav",
+      "peaks_url": "/peaks/frog-ribbit.json"
     },
     {
       "id": "glitch-logo",
@@ -264,8 +264,8 @@
         ]
       },
       "file": "glitch-logo.wav",
-      "url": "https://sfx.woven.video/sfx/glitch-logo.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/glitch-logo.json"
+      "url": "https://assets.sfx.woven.video/sfx/glitch-logo.wav",
+      "peaks_url": "/peaks/glitch-logo.json"
     },
     {
       "id": "keyboard-typing",
@@ -275,8 +275,8 @@
       ],
       "default_volume": 0.35,
       "file": "keyboard-typing.wav",
-      "url": "https://sfx.woven.video/sfx/keyboard-typing.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/keyboard-typing.json"
+      "url": "https://assets.sfx.woven.video/sfx/keyboard-typing.wav",
+      "peaks_url": "/peaks/keyboard-typing.json"
     },
     {
       "id": "keyboard-typing-realistic",
@@ -286,8 +286,8 @@
       ],
       "default_volume": 0.35,
       "file": "keyboard-typing-realistic.wav",
-      "url": "https://sfx.woven.video/sfx/keyboard-typing-realistic.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/keyboard-typing-realistic.json"
+      "url": "https://assets.sfx.woven.video/sfx/keyboard-typing-realistic.wav",
+      "peaks_url": "/peaks/keyboard-typing-realistic.json"
     },
     {
       "id": "male-gasp",
@@ -299,8 +299,8 @@
       ],
       "default_volume": 0.4,
       "file": "male-gasp.wav",
-      "url": "https://sfx.woven.video/sfx/male-gasp.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/male-gasp.json"
+      "url": "https://assets.sfx.woven.video/sfx/male-gasp.wav",
+      "peaks_url": "/peaks/male-gasp.json"
     },
     {
       "id": "message-pop-reply",
@@ -311,8 +311,8 @@
       ],
       "default_volume": 0.4,
       "file": "message-pop-reply.wav",
-      "url": "https://sfx.woven.video/sfx/message-pop-reply.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/message-pop-reply.json"
+      "url": "https://assets.sfx.woven.video/sfx/message-pop-reply.wav",
+      "peaks_url": "/peaks/message-pop-reply.json"
     },
     {
       "id": "money-chalking",
@@ -323,8 +323,8 @@
       ],
       "default_volume": 0.4,
       "file": "money-chalking.wav",
-      "url": "https://sfx.woven.video/sfx/money-chalking.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/money-chalking.json"
+      "url": "https://assets.sfx.woven.video/sfx/money-chalking.wav",
+      "peaks_url": "/peaks/money-chalking.json"
     },
     {
       "id": "mouse-click-1",
@@ -334,8 +334,8 @@
       ],
       "default_volume": 0.3,
       "file": "mouse-click-1.wav",
-      "url": "https://sfx.woven.video/sfx/mouse-click-1.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/mouse-click-1.json"
+      "url": "https://assets.sfx.woven.video/sfx/mouse-click-1.wav",
+      "peaks_url": "/peaks/mouse-click-1.json"
     },
     {
       "id": "mouse-click-2",
@@ -345,8 +345,8 @@
       ],
       "default_volume": 0.3,
       "file": "mouse-click-2.wav",
-      "url": "https://sfx.woven.video/sfx/mouse-click-2.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/mouse-click-2.json"
+      "url": "https://assets.sfx.woven.video/sfx/mouse-click-2.wav",
+      "peaks_url": "/peaks/mouse-click-2.json"
     },
     {
       "id": "notification-ding",
@@ -357,8 +357,8 @@
       ],
       "default_volume": 0.4,
       "file": "notification-ding.wav",
-      "url": "https://sfx.woven.video/sfx/notification-ding.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/notification-ding.json"
+      "url": "https://assets.sfx.woven.video/sfx/notification-ding.wav",
+      "peaks_url": "/peaks/notification-ding.json"
     },
     {
       "id": "pop-hand",
@@ -368,8 +368,8 @@
       ],
       "default_volume": 0.4,
       "file": "pop-hand.wav",
-      "url": "https://sfx.woven.video/sfx/pop-hand.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/pop-hand.json"
+      "url": "https://assets.sfx.woven.video/sfx/pop-hand.wav",
+      "peaks_url": "/peaks/pop-hand.json"
     },
     {
       "id": "record-needle-scratch",
@@ -385,8 +385,8 @@
         ]
       },
       "file": "record-needle-scratch.wav",
-      "url": "https://sfx.woven.video/sfx/record-needle-scratch.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/record-needle-scratch.json"
+      "url": "https://assets.sfx.woven.video/sfx/record-needle-scratch.wav",
+      "peaks_url": "/peaks/record-needle-scratch.json"
     },
     {
       "id": "record-scratch",
@@ -402,8 +402,8 @@
         ]
       },
       "file": "record-scratch.wav",
-      "url": "https://sfx.woven.video/sfx/record-scratch.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/record-scratch.json"
+      "url": "https://assets.sfx.woven.video/sfx/record-scratch.wav",
+      "peaks_url": "/peaks/record-scratch.json"
     },
     {
       "id": "several-coins",
@@ -414,8 +414,8 @@
       ],
       "default_volume": 0.4,
       "file": "several-coins.wav",
-      "url": "https://sfx.woven.video/sfx/several-coins.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/several-coins.json"
+      "url": "https://assets.sfx.woven.video/sfx/several-coins.wav",
+      "peaks_url": "/peaks/several-coins.json"
     },
     {
       "id": "sideways-record-needle",
@@ -431,8 +431,8 @@
         ]
       },
       "file": "sideways-record-needle.wav",
-      "url": "https://sfx.woven.video/sfx/sideways-record-needle.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/sideways-record-needle.json"
+      "url": "https://assets.sfx.woven.video/sfx/sideways-record-needle.wav",
+      "peaks_url": "/peaks/sideways-record-needle.json"
     },
     {
       "id": "swish-whoosh-large",
@@ -448,8 +448,8 @@
         ]
       },
       "file": "swish-whoosh-large.wav",
-      "url": "https://sfx.woven.video/sfx/swish-whoosh-large.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/swish-whoosh-large.json"
+      "url": "https://assets.sfx.woven.video/sfx/swish-whoosh-large.wav",
+      "peaks_url": "/peaks/swish-whoosh-large.json"
     },
     {
       "id": "tick-sound",
@@ -459,8 +459,8 @@
       ],
       "default_volume": 0.3,
       "file": "tick-sound.wav",
-      "url": "https://sfx.woven.video/sfx/tick-sound.wav",
-      "peaks_url": "https://sfx.woven.video/peaks/tick-sound.json"
+      "url": "https://assets.sfx.woven.video/sfx/tick-sound.wav",
+      "peaks_url": "/peaks/tick-sound.json"
     }
   ]
 }

@@ -54,13 +54,13 @@ pnpm generate:peaks
 
 **Why Astro?** Static landing page (hero, catalog, docs) built to `dist/` and served by the Cloudflare Worker alongside `catalog.json` and peaks. React islands handle the interactive catalog. Astro keeps the marketing shell fast and deployable as static assets.
 
-**Audio lives in R2 only** — the Worker proxies `/sfx/*` to the `woven-sfx` bucket. Local dev hits the same bucket; no copied WAVs, no local R2 simulation.
+**Audio lives in R2 only** — catalog URLs point directly at the public R2 custom domain `https://assets.sfx.woven.video/sfx/*`. Local dev and production use the same public asset URLs.
 
 ```bash
-# UI work (most of the time): Astro HMR, /sfx/* proxied to sfx.woven.video
+# UI work (most of the time): Astro HMR, audio loaded from assets.sfx.woven.video
 cd apps/web && pnpm dev:ui
 
-# Full Worker stack locally: wrangler dev with remote R2 binding (needs wrangler login)
+# Full Worker/static-assets stack locally (needs wrangler login)
 cd apps/web && pnpm dev
 ```
 
@@ -74,7 +74,7 @@ npm login
 # 2. Create R2 bucket for sound files
 wrangler r2 bucket create woven-sfx
 
-# 3. Upload .wav files to R2 (served at sfx.woven.video/sfx/* via Worker)
+# 3. Upload .wav files to R2 (served at assets.sfx.woven.video/sfx/*)
 pnpm upload:r2
 
 # 4. Publish MCP to npm
@@ -110,7 +110,7 @@ pnpm deploy
 
 ### Sound files (R2)
 
-WAV files live in R2 only. The Worker at `sfx.woven.video` proxies `/sfx/*` to the `woven-sfx` bucket. Landing, `catalog.json`, and peaks deploy with Workers static assets.
+WAV files live in R2 only and are served directly from the public R2 custom domain `assets.sfx.woven.video`. Landing, `catalog.json`, and peaks deploy with Workers static assets.
 
 ```bash
 pnpm upload:r2   # uploads sounds/*.wav → R2

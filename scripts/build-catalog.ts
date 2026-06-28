@@ -1,12 +1,13 @@
 import { readdir, readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 
-const CDN = process.env.SFX_CDN_BASE ?? "https://sfx.woven.video";
 const SOUNDS_DIR = join(import.meta.dirname, "../catalog/sounds");
 const OUT_PATHS = [
   join(import.meta.dirname, "../apps/web/public/catalog.json"),
   join(import.meta.dirname, "../packages/mcp/catalog.json"),
 ];
+const SFX_ASSET_BASE_URL =
+  process.env.SFX_ASSET_BASE_URL ?? "https://assets.sfx.woven.video";
 
 async function main() {
   const files = (await readdir(SOUNDS_DIR)).filter((f) => f.endsWith(".json"));
@@ -17,8 +18,8 @@ async function main() {
       return {
         ...sound,
         file: sound.file ?? `${sound.id}.wav`,
-        url: sound.url ?? `${CDN}/sfx/${sound.id}.wav`,
-        peaks_url: sound.peaks_url ?? `${CDN}/peaks/${sound.id}.json`,
+        url: sound.url ?? `${SFX_ASSET_BASE_URL}/sfx/${sound.id}.wav`,
+        peaks_url: sound.peaks_url ?? `/peaks/${sound.id}.json`,
       };
     }),
   );
