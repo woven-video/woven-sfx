@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "Installing woven-sfx skill via skills CLI..."
-npx skills add woven-video/skills --skill woven-sfx -g -y
+npx skills add woven-video/skills --skill woven-sfx -g -y < /dev/null
 
 SKILL_DIR="${HOME}/.agents/skills/woven-sfx"
 PULL_SCRIPT="${SKILL_DIR}/scripts/pull-library.sh"
