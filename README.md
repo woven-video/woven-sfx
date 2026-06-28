@@ -33,6 +33,14 @@ pnpm build
 pnpm test
 ```
 
+### Waveform peaks
+
+```bash
+pnpm generate:peaks
+```
+
+Writes `apps/web/public/peaks/{id}.json` for every catalog sound. When `sounds/{id}.wav` files exist and [audiowaveform](https://github.com/bbc/audiowaveform) is installed (`brew install audiowaveform`), peaks are generated from the audio. Otherwise the script emits deterministic 32-bar synthetic peaks derived from each sound id (dev fallback until source WAVs are present).
+
 ## License
 
 - Code: [MIT](LICENSE)
