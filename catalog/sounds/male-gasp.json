@@ -1,0 +1,10 @@
+{
+  "id": "male-gasp",
+  "duration_ms": 464,
+  "tags": [
+    "gasp",
+    "reaction",
+    "voice"
+  ],
+  "default_volume": 0.4
+}

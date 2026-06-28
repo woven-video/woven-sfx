@@ -1,0 +1,9 @@
+{
+  "id": "explosion",
+  "duration_ms": 3181,
+  "tags": [
+    "impact",
+    "dramatic"
+  ],
+  "default_volume": 0.45
+}

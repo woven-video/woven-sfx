@@ -1,0 +1,10 @@
+{
+  "id": "female-gasp",
+  "duration_ms": 488,
+  "tags": [
+    "gasp",
+    "reaction",
+    "voice"
+  ],
+  "default_volume": 0.4
+}

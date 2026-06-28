@@ -3,7 +3,7 @@
   "sounds": [
     {
       "id": "airplane-ding",
-      "duration_ms": 1000,
+      "duration_ms": 1184,
       "tags": [
         "ding",
         "ambient"
@@ -14,8 +14,20 @@
       "peaks_url": "https://sfx.woven.video/peaks/airplane-ding.json"
     },
     {
+      "id": "applause",
+      "duration_ms": 12910,
+      "tags": [
+        "applause",
+        "reaction"
+      ],
+      "default_volume": 0.45,
+      "file": "applause.wav",
+      "url": "https://sfx.woven.video/sfx/applause.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/applause.json"
+    },
+    {
       "id": "base-drop",
-      "duration_ms": 900,
+      "duration_ms": 3297,
       "tags": [
         "impact",
         "bass"
@@ -27,7 +39,7 @@
     },
     {
       "id": "bass-impact",
-      "duration_ms": 1100,
+      "duration_ms": 2461,
       "tags": [
         "impact",
         "bass"
@@ -39,7 +51,7 @@
     },
     {
       "id": "beep-short",
-      "duration_ms": 150,
+      "duration_ms": 697,
       "tags": [
         "ui"
       ],
@@ -50,7 +62,7 @@
     },
     {
       "id": "camera-analog",
-      "duration_ms": 350,
+      "duration_ms": 859,
       "tags": [
         "camera",
         "ui"
@@ -62,7 +74,7 @@
     },
     {
       "id": "camera-flash",
-      "duration_ms": 180,
+      "duration_ms": 6455,
       "tags": [
         "pop",
         "camera"
@@ -78,8 +90,32 @@
       "peaks_url": "https://sfx.woven.video/peaks/camera-flash.json"
     },
     {
+      "id": "camera-shutter-1-shot",
+      "duration_ms": 279,
+      "tags": [
+        "camera",
+        "ui"
+      ],
+      "default_volume": 0.4,
+      "file": "camera-shutter-1-shot.wav",
+      "url": "https://sfx.woven.video/sfx/camera-shutter-1-shot.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/camera-shutter-1-shot.json"
+    },
+    {
+      "id": "camera-shutter-8-shots",
+      "duration_ms": 1115,
+      "tags": [
+        "camera",
+        "ui"
+      ],
+      "default_volume": 0.4,
+      "file": "camera-shutter-8-shots.wav",
+      "url": "https://sfx.woven.video/sfx/camera-shutter-8-shots.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/camera-shutter-8-shots.json"
+    },
+    {
       "id": "camera-shutter-release",
-      "duration_ms": 120,
+      "duration_ms": 580,
       "tags": [
         "camera",
         "ui"
@@ -90,8 +126,21 @@
       "peaks_url": "https://sfx.woven.video/peaks/camera-shutter-release.json"
     },
     {
+      "id": "cheers-and-applause",
+      "duration_ms": 4087,
+      "tags": [
+        "applause",
+        "reaction",
+        "cheer"
+      ],
+      "default_volume": 0.45,
+      "file": "cheers-and-applause.wav",
+      "url": "https://sfx.woven.video/sfx/cheers-and-applause.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/cheers-and-applause.json"
+    },
+    {
       "id": "deep-whoosh",
-      "duration_ms": 650,
+      "duration_ms": 3228,
       "tags": [
         "whoosh",
         "transition"
@@ -108,7 +157,7 @@
     },
     {
       "id": "dj-scratch",
-      "duration_ms": 500,
+      "duration_ms": 1556,
       "tags": [
         "glitch"
       ],
@@ -124,8 +173,20 @@
       "peaks_url": "https://sfx.woven.video/peaks/dj-scratch.json"
     },
     {
+      "id": "dull-thud",
+      "duration_ms": 1393,
+      "tags": [
+        "impact",
+        "thud"
+      ],
+      "default_volume": 0.5,
+      "file": "dull-thud.wav",
+      "url": "https://sfx.woven.video/sfx/dull-thud.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/dull-thud.json"
+    },
+    {
       "id": "elevator-ding",
-      "duration_ms": 900,
+      "duration_ms": 1997,
       "tags": [
         "ding"
       ],
@@ -135,8 +196,20 @@
       "peaks_url": "https://sfx.woven.video/peaks/elevator-ding.json"
     },
     {
+      "id": "explosion",
+      "duration_ms": 3181,
+      "tags": [
+        "impact",
+        "dramatic"
+      ],
+      "default_volume": 0.45,
+      "file": "explosion.wav",
+      "url": "https://sfx.woven.video/sfx/explosion.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/explosion.json"
+    },
+    {
       "id": "fast-whoosh",
-      "duration_ms": 420,
+      "duration_ms": 395,
       "tags": [
         "whoosh",
         "transition"
@@ -153,8 +226,21 @@
       "peaks_url": "https://sfx.woven.video/peaks/fast-whoosh.json"
     },
     {
+      "id": "female-gasp",
+      "duration_ms": 488,
+      "tags": [
+        "gasp",
+        "reaction",
+        "voice"
+      ],
+      "default_volume": 0.4,
+      "file": "female-gasp.wav",
+      "url": "https://sfx.woven.video/sfx/female-gasp.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/female-gasp.json"
+    },
+    {
       "id": "frog-ribbit",
-      "duration_ms": 500,
+      "duration_ms": 697,
       "tags": [
         "ambient",
         "novelty"
@@ -166,7 +252,7 @@
     },
     {
       "id": "glitch-logo",
-      "duration_ms": 320,
+      "duration_ms": 627,
       "tags": [
         "glitch"
       ],
@@ -183,7 +269,7 @@
     },
     {
       "id": "keyboard-typing",
-      "duration_ms": 1400,
+      "duration_ms": 10286,
       "tags": [
         "ui"
       ],
@@ -194,7 +280,7 @@
     },
     {
       "id": "keyboard-typing-realistic",
-      "duration_ms": 2000,
+      "duration_ms": 3390,
       "tags": [
         "ui"
       ],
@@ -204,8 +290,21 @@
       "peaks_url": "https://sfx.woven.video/peaks/keyboard-typing-realistic.json"
     },
     {
+      "id": "male-gasp",
+      "duration_ms": 464,
+      "tags": [
+        "gasp",
+        "reaction",
+        "voice"
+      ],
+      "default_volume": 0.4,
+      "file": "male-gasp.wav",
+      "url": "https://sfx.woven.video/sfx/male-gasp.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/male-gasp.json"
+    },
+    {
       "id": "message-pop-reply",
-      "duration_ms": 250,
+      "duration_ms": 882,
       "tags": [
         "pop",
         "ui"
@@ -217,7 +316,7 @@
     },
     {
       "id": "money-chalking",
-      "duration_ms": 600,
+      "duration_ms": 1858,
       "tags": [
         "ui",
         "impact"
@@ -229,7 +328,7 @@
     },
     {
       "id": "mouse-click-1",
-      "duration_ms": 60,
+      "duration_ms": 766,
       "tags": [
         "ui"
       ],
@@ -240,7 +339,7 @@
     },
     {
       "id": "mouse-click-2",
-      "duration_ms": 70,
+      "duration_ms": 186,
       "tags": [
         "ui"
       ],
@@ -251,7 +350,7 @@
     },
     {
       "id": "notification-ding",
-      "duration_ms": 450,
+      "duration_ms": 1997,
       "tags": [
         "ding",
         "ui"
@@ -263,7 +362,7 @@
     },
     {
       "id": "pop-hand",
-      "duration_ms": 200,
+      "duration_ms": 348,
       "tags": [
         "pop"
       ],
@@ -274,7 +373,7 @@
     },
     {
       "id": "record-needle-scratch",
-      "duration_ms": 400,
+      "duration_ms": 1649,
       "tags": [
         "glitch"
       ],
@@ -291,7 +390,7 @@
     },
     {
       "id": "record-scratch",
-      "duration_ms": 280,
+      "duration_ms": 1277,
       "tags": [
         "glitch"
       ],
@@ -308,7 +407,7 @@
     },
     {
       "id": "several-coins",
-      "duration_ms": 150,
+      "duration_ms": 1416,
       "tags": [
         "ui",
         "ambient"
@@ -320,7 +419,7 @@
     },
     {
       "id": "sideways-record-needle",
-      "duration_ms": 380,
+      "duration_ms": 580,
       "tags": [
         "glitch"
       ],
@@ -337,7 +436,7 @@
     },
     {
       "id": "swish-whoosh-large",
-      "duration_ms": 550,
+      "duration_ms": 789,
       "tags": [
         "whoosh",
         "transition"
@@ -354,7 +453,7 @@
     },
     {
       "id": "tick-sound",
-      "duration_ms": 50,
+      "duration_ms": 557,
       "tags": [
         "ui"
       ],

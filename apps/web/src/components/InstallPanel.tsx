@@ -16,7 +16,7 @@ const MCP_CONFIG = `{
 }`;
 
 const SUMMARY = [
-  "27 CC0 sounds for video edits — whooshes, pops, glitches, UI ticks",
+  "35 CC0 sounds for video edits — whooshes, pops, glitches, UI ticks",
   "MCP tools to search, resolve transition pairings, and pull .wav files locally",
   "Workflow hooks for /edit-plan (SFX placement) and /assemble (cache verify)",
 ];
