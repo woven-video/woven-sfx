@@ -4,7 +4,7 @@ description: Resolve and pull Woven sound effects for video edits. Use during /e
 license: MIT
 compatibility: Requires Node.js, network access to sfx.woven.video, and woven-sfx-mcp MCP server.
 metadata:
-  author: woven-labs
+  author: woven-video
   version: "0.1"
   site: https://sfx.woven.video
 ---

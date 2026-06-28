@@ -7,7 +7,7 @@ Agent-first, open-source sound effects registry for video editing workflows.
 ## Install
 
 ```bash
-npx skills add woven-labs/woven-sfx --skill woven-sfx -g -y
+npx skills add woven-video/woven-sfx --skill woven-sfx -g -y
 ```
 
 Then add the MCP server (see `skills/woven-sfx/references/mcp-setup.md`) and pull sounds into your project:

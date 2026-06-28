@@ -4,7 +4,7 @@ set -euo pipefail
 CDN="${SFX_CDN_BASE:-https://sfx.woven.video}"
 
 echo "Installing woven-sfx skill via skills CLI..."
-npx skills add woven-labs/woven-sfx --skill woven-sfx -g -y
+npx skills add woven-video/woven-sfx --skill woven-sfx -g -y
 
 SKILL_DIR="${HOME}/.agents/skills/woven-sfx"
 PULL_SCRIPT="${SKILL_DIR}/scripts/pull-library.sh"

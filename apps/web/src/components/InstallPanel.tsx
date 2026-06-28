@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const INSTALL_CMD =
-  "npx skills add woven-labs/woven-sfx --skill woven-sfx -g -y";
+  "npx skills add woven-video/woven-sfx --skill woven-sfx -g -y";
 const PULL_CMD =
   "cd your-project && bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh";
 const CURL_INSTALL_CMD =
