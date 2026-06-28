@@ -1,17 +1,28 @@
 ---
 import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Woven SFX — Sound effects for AI agents</title>
+    <meta
+      name="description"
+      content="Open source sound effects your agent can pull into video edits."
+    />
+  </head>
+  <body class="min-h-screen bg-stone-950 text-stone-200 antialiased">
+    <SiteHeader />
+    <main>
+      <Hero />
+    </main>
+    <SiteFooter />
+  </body>
 </html>

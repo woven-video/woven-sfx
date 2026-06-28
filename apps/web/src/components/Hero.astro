@@ -1,0 +1,26 @@
+---
+import InstallPanel from "./InstallPanel";
+import HowItWorksTimeline from "./HowItWorksTimeline.astro";
+---
+
+<section class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+  <div class="max-w-2xl">
+    <p class="text-sm font-medium tracking-wide text-stone-500">
+      MIT · CC0 sounds
+    </p>
+    <h1
+      class="mt-3 text-3xl font-semibold tracking-tight text-stone-200 sm:text-4xl lg:text-5xl"
+    >
+      Sound effects for AI agents
+    </h1>
+    <p class="mt-4 text-base leading-relaxed text-stone-400 sm:text-lg">
+      One install. Your agent pulls whooshes, pops, and glitches into video
+      edits.
+    </p>
+  </div>
+
+  <div class="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8">
+    <InstallPanel client:load />
+    <HowItWorksTimeline />
+  </div>
+</section>

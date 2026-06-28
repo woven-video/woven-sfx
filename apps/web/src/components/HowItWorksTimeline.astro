@@ -1,0 +1,56 @@
+---
+const steps = [
+  {
+    title: "Install skill + MCP",
+    description: "Agent gets /woven-sfx and sfx_* tools",
+  },
+  {
+    title: "Agent resolves a sound",
+    description: 'sfx_resolve({ transition: "pull-in" })',
+    code: true,
+  },
+  {
+    title: "File lands locally",
+    description:
+      "~/.local/share/woven-sfx/library/ → ready for /assemble",
+    code: true,
+  },
+];
+---
+
+<div class="rounded-xl border border-stone-800 bg-stone-900/40 p-5 sm:p-6">
+  <p class="mb-6 text-xs font-medium uppercase tracking-wider text-stone-500">
+    How it works
+  </p>
+
+  <ol class="relative space-y-8">
+    {
+      steps.map((step, index) => (
+        <li class="relative flex gap-4 pl-1">
+          {index < steps.length - 1 ? (
+            <span
+              class="absolute left-[7px] top-5 h-[calc(100%+1rem)] w-px bg-stone-700"
+              aria-hidden="true"
+            />
+          ) : null}
+
+          <span
+            class="relative z-10 mt-1.5 h-3.5 w-3.5 shrink-0 rounded-full border-2 border-stone-500 bg-stone-950"
+            aria-hidden="true"
+          />
+
+          <div class="min-w-0 pb-1">
+            <h3 class="text-sm font-medium text-stone-200">{step.title}</h3>
+            {step.code ? (
+              <p class="mt-1 font-mono text-sm text-stone-400">
+                {step.description}
+              </p>
+            ) : (
+              <p class="mt-1 text-sm text-stone-400">{step.description}</p>
+            )}
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</div>

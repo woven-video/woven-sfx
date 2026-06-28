@@ -1,0 +1,39 @@
+---
+const navLinks = [
+  { href: "#catalog", label: "Sounds" },
+  { href: "#agents", label: "For agents" },
+  {
+    href: "https://github.com/woven-labs/woven-sfx",
+    label: "GitHub",
+    external: true,
+  },
+];
+---
+
+<header class="border-b border-stone-800">
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6"
+  >
+    <a
+      href="/"
+      class="text-lg font-semibold tracking-tight text-stone-200 transition-colors hover:text-white"
+    >
+      Woven SFX
+    </a>
+    <nav class="flex items-center gap-5 text-sm">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-stone-400 transition-colors hover:text-stone-200"
+            {...(link.external
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
