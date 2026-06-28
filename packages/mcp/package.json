@@ -1,12 +1,24 @@
 {
   "name": "woven-sfx-mcp",
   "version": "0.1.0",
+  "description": "stdio MCP server for the Woven SFX catalog",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woven-video/woven-sfx.git",
+    "directory": "packages/mcp"
+  },
+  "homepage": "https://sfx.woven.video",
+  "bugs": "https://github.com/woven-video/woven-sfx/issues",
+  "license": "MIT",
+  "keywords": ["mcp", "sfx", "sound-effects", "woven", "agent"],
   "bin": {
-    "woven-sfx-mcp": "./dist/index.js"
+    "woven-sfx-mcp": "./dist/bundle.js"
   },
   "scripts": {
     "build": "tsc",
+    "build:bundle": "node scripts/build-bundle.mjs",
+    "prepublishOnly": "pnpm --filter @woven-sfx/core build && pnpm build:bundle",
     "start": "node dist/index.js"
   },
   "dependencies": {
@@ -16,10 +28,15 @@
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
     "typescript": "^5.8.0"
   },
   "files": [
-    "dist",
+    "dist/bundle.js",
+    "dist/catalog.json",
     "catalog.json"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

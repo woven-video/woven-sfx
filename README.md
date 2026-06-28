@@ -43,7 +43,30 @@ woven-sfx/
 pnpm install
 pnpm build
 pnpm test
-pnpm sync:skill   # copy SKILL.md → apps/web/public/skill.md
+pnpm sync:skill      # copy SKILL.md → apps/web/public/skill.md
+pnpm seed:sounds     # generate v0 placeholder .wav files (replace with finals later)
+pnpm update:durations
+pnpm generate:peaks
+```
+
+### Ship checklist
+
+```bash
+# 1. Auth (one-time)
+wrangler login
+npm login
+
+# 2. Create R2 bucket + public domain sfx.woven.video (Cloudflare dashboard)
+wrangler r2 bucket create woven-sfx
+
+# 3. Upload audio + catalog to R2
+pnpm upload:r2
+
+# 4. Publish MCP to npm
+cd packages/mcp && npm publish --access public
+
+# 5. Deploy landing
+cd apps/web && pnpm deploy
 ```
 
 ### Waveform peaks
@@ -52,7 +75,9 @@ pnpm sync:skill   # copy SKILL.md → apps/web/public/skill.md
 pnpm generate:peaks
 ```
 
-Writes `apps/web/public/peaks/{id}.json` for every catalog sound. When `sounds/{id}.wav` files exist and [audiowaveform](https://github.com/bbc/audiowaveform) is installed (`brew install audiowaveform`), peaks are generated from the audio. Otherwise the script emits deterministic 32-bar synthetic peaks derived from each sound id (dev fallback until source WAVs are present).
+Writes `apps/web/public/peaks/{id}.json` for every catalog sound. When `sounds/{id}.wav` files exist and [audiowaveform](https://github.com/bbc/audiowaveform) is installed (`brew install audiowaveform`), peaks are generated from the audio. Otherwise the script emits deterministic 32-bar synthetic peaks derived from each sound id.
+
+**Note:** `pnpm seed:sounds` generates ffmpeg placeholder WAVs for v0 plumbing. Replace files in `sounds/` with final CC0 assets before calling the pack production-ready.
 
 ## Deploy (Cloudflare)
 

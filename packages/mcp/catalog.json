@@ -3,7 +3,7 @@
   "sounds": [
     {
       "id": "airplane-ding",
-      "duration_ms": 500,
+      "duration_ms": 1000,
       "tags": [
         "ding",
         "ambient"
@@ -15,7 +15,7 @@
     },
     {
       "id": "base-drop",
-      "duration_ms": 500,
+      "duration_ms": 900,
       "tags": [
         "impact",
         "bass"
@@ -27,7 +27,7 @@
     },
     {
       "id": "bass-impact",
-      "duration_ms": 500,
+      "duration_ms": 1100,
       "tags": [
         "impact",
         "bass"
@@ -39,7 +39,7 @@
     },
     {
       "id": "beep-short",
-      "duration_ms": 500,
+      "duration_ms": 150,
       "tags": [
         "ui"
       ],
@@ -50,7 +50,7 @@
     },
     {
       "id": "camera-analog",
-      "duration_ms": 500,
+      "duration_ms": 350,
       "tags": [
         "camera",
         "ui"
@@ -62,7 +62,7 @@
     },
     {
       "id": "camera-flash",
-      "duration_ms": 500,
+      "duration_ms": 180,
       "tags": [
         "pop",
         "camera"
@@ -79,7 +79,7 @@
     },
     {
       "id": "camera-shutter-release",
-      "duration_ms": 500,
+      "duration_ms": 120,
       "tags": [
         "camera",
         "ui"
@@ -91,7 +91,7 @@
     },
     {
       "id": "deep-whoosh",
-      "duration_ms": 500,
+      "duration_ms": 650,
       "tags": [
         "whoosh",
         "transition"
@@ -125,7 +125,7 @@
     },
     {
       "id": "elevator-ding",
-      "duration_ms": 500,
+      "duration_ms": 900,
       "tags": [
         "ding"
       ],
@@ -136,7 +136,7 @@
     },
     {
       "id": "fast-whoosh",
-      "duration_ms": 500,
+      "duration_ms": 420,
       "tags": [
         "whoosh",
         "transition"
@@ -166,7 +166,7 @@
     },
     {
       "id": "glitch-logo",
-      "duration_ms": 500,
+      "duration_ms": 320,
       "tags": [
         "glitch"
       ],
@@ -183,7 +183,7 @@
     },
     {
       "id": "keyboard-typing",
-      "duration_ms": 500,
+      "duration_ms": 1400,
       "tags": [
         "ui"
       ],
@@ -194,7 +194,7 @@
     },
     {
       "id": "keyboard-typing-realistic",
-      "duration_ms": 500,
+      "duration_ms": 2000,
       "tags": [
         "ui"
       ],
@@ -205,7 +205,7 @@
     },
     {
       "id": "message-pop-reply",
-      "duration_ms": 500,
+      "duration_ms": 250,
       "tags": [
         "pop",
         "ui"
@@ -217,7 +217,7 @@
     },
     {
       "id": "money-chalking",
-      "duration_ms": 500,
+      "duration_ms": 600,
       "tags": [
         "ui",
         "impact"
@@ -229,7 +229,7 @@
     },
     {
       "id": "mouse-click-1",
-      "duration_ms": 500,
+      "duration_ms": 60,
       "tags": [
         "ui"
       ],
@@ -240,7 +240,7 @@
     },
     {
       "id": "mouse-click-2",
-      "duration_ms": 500,
+      "duration_ms": 70,
       "tags": [
         "ui"
       ],
@@ -251,7 +251,7 @@
     },
     {
       "id": "notification-ding",
-      "duration_ms": 500,
+      "duration_ms": 450,
       "tags": [
         "ding",
         "ui"
@@ -263,7 +263,7 @@
     },
     {
       "id": "pop-hand",
-      "duration_ms": 500,
+      "duration_ms": 200,
       "tags": [
         "pop"
       ],
@@ -274,7 +274,7 @@
     },
     {
       "id": "record-needle-scratch",
-      "duration_ms": 500,
+      "duration_ms": 400,
       "tags": [
         "glitch"
       ],
@@ -291,7 +291,7 @@
     },
     {
       "id": "record-scratch",
-      "duration_ms": 500,
+      "duration_ms": 280,
       "tags": [
         "glitch"
       ],
@@ -308,7 +308,7 @@
     },
     {
       "id": "several-coins",
-      "duration_ms": 500,
+      "duration_ms": 150,
       "tags": [
         "ui",
         "ambient"
@@ -320,7 +320,7 @@
     },
     {
       "id": "sideways-record-needle",
-      "duration_ms": 500,
+      "duration_ms": 380,
       "tags": [
         "glitch"
       ],
@@ -337,7 +337,7 @@
     },
     {
       "id": "swish-whoosh-large",
-      "duration_ms": 500,
+      "duration_ms": 550,
       "tags": [
         "whoosh",
         "transition"
@@ -354,7 +354,7 @@
     },
     {
       "id": "tick-sound",
-      "duration_ms": 500,
+      "duration_ms": 50,
       "tags": [
         "ui"
       ],

@@ -1,6 +1,6 @@
 {
   "id": "tick-sound",
-  "duration_ms": 500,
+  "duration_ms": 50,
   "tags": [
     "ui"
   ],
