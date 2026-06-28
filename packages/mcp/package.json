@@ -1,6 +1,6 @@
 {
   "name": "woven-sfx-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "stdio MCP server for the Woven SFX catalog",
   "type": "module",
   "repository": {
@@ -11,7 +11,13 @@
   "homepage": "https://sfx.woven.video",
   "bugs": "https://github.com/woven-video/woven-sfx/issues",
   "license": "MIT",
-  "keywords": ["mcp", "sfx", "sound-effects", "woven", "agent"],
+  "keywords": [
+    "mcp",
+    "sfx",
+    "sound-effects",
+    "woven",
+    "agent"
+  ],
   "bin": {
     "woven-sfx-mcp": "./dist/bundle.js"
   },
