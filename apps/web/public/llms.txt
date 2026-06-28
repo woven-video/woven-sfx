@@ -6,7 +6,12 @@ npx skills add woven-labs/woven-sfx --skill woven-sfx -g -y
 
 ## Also setup
 MCP: npx -y woven-sfx-mcp (see skills/woven-sfx/references/mcp-setup.md)
-Sounds: bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh
+Sounds: cd your-project && bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh
+
+## Sound library path
+1. WOVEN_SFX_LIBRARY env
+2. sfx-library in .claude/project.md
+3. ./sounds/sfx/ under cwd
 
 ## Catalog
 https://sfx.woven.video/catalog.json

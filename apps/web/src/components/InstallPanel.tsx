@@ -2,7 +2,8 @@ import { useState } from "react";
 
 const INSTALL_CMD =
   "npx skills add woven-labs/woven-sfx --skill woven-sfx -g -y";
-const PULL_CMD = "bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh";
+const PULL_CMD =
+  "cd your-project && bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh";
 const CURL_INSTALL_CMD =
   "curl -fsSL https://sfx.woven.video/install.sh | bash";
 const MCP_CONFIG = `{
@@ -92,9 +93,13 @@ export default function InstallPanel() {
           </code>
         </p>
         <p>
-          <span className="text-stone-500">Library</span>{" "}
+          <span className="text-stone-500">Sounds</span>{" "}
           <code className="font-mono text-stone-300">
-            ~/.local/share/woven-sfx/library/
+            ./sounds/sfx/
+          </code>
+          <span className="text-stone-500"> or </span>
+          <code className="font-mono text-stone-300">
+            project.md sfx-library
           </code>
         </p>
       </div>

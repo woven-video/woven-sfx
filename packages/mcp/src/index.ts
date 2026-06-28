@@ -38,7 +38,8 @@ server.registerTool(
   "sfx_pull",
   {
     title: "Pull SFX to local library",
-    description: "Download a sound by id to ~/.local/share/woven-sfx/library/",
+    description:
+      "Download a sound by id to the project library (WOVEN_SFX_LIBRARY, project.md sfx-library, or ./sounds/sfx/)",
     inputSchema: z.object({ id: z.string() }),
   },
   async ({ id }) => {
@@ -79,7 +80,7 @@ server.registerTool(
   "sfx_list_installed",
   {
     title: "List installed SFX",
-    description: "List .wav files in the local Woven SFX library",
+    description: "List .wav files in the project sound library",
     inputSchema: z.object({}),
   },
   async () => textResult({ files: await listInstalled() }),

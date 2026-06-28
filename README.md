@@ -10,11 +10,14 @@ Agent-first, open-source sound effects registry for video editing workflows.
 npx skills add woven-labs/woven-sfx --skill woven-sfx -g -y
 ```
 
-Then add the MCP server (see `skills/woven-sfx/references/mcp-setup.md`) and optionally pull sounds:
+Then add the MCP server (see `skills/woven-sfx/references/mcp-setup.md`) and pull sounds into your project:
 
 ```bash
+cd your-reel-project
 bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh
 ```
+
+Sounds land in `./sounds/sfx/` by default, or wherever `sfx-library` points in `.claude/project.md`.
 
 **Advanced:** `curl -fsSL https://sfx.woven.video/install.sh | bash` — skill + library + MCP instructions in one shot.
 

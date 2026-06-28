@@ -21,7 +21,7 @@ Resolve and cache sound effects for video edits using the woven-sfx MCP server.
 ## Prerequisites
 
 1. MCP server configured — see [references/mcp-setup.md](references/mcp-setup.md).
-2. Local library at `~/.local/share/woven-sfx/library/` — run `scripts/pull-library.sh` to prefetch, or let MCP tools pull on demand.
+2. Project-local sound library — resolved in order: `WOVEN_SFX_LIBRARY` env → `sfx-library` in `.claude/project.md` → `./sounds/sfx/` under cwd. Run `scripts/pull-library.sh` from your project root to prefetch, or let MCP tools pull on demand.
 
 ## Workflow
 
@@ -66,7 +66,7 @@ Record resolved values in the edit plan:
 
 - `id` — catalog sound ID
 - `file` — filename (e.g. `fast-whoosh.wav`)
-- `localPath` — absolute path under `~/.local/share/woven-sfx/library/`
+- `localPath` — absolute path in the project sound library (see path resolution above)
 - `duration_ms` — clip length for placement
 - `suggested_volume` — default gain (override only when the user asks)
 
