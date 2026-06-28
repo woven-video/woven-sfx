@@ -1,6 +1,12 @@
 ---
 name: woven-sfx
 description: Resolve and pull Woven sound effects for video edits. Use during /edit-plan (step 4 SFX placement) and before /assemble (ensure files cached). Requires woven-sfx MCP tools (sfx_resolve, sfx_pull, sfx_list_installed).
+license: MIT
+compatibility: Requires Node.js, network access to sfx.woven.video, and woven-sfx-mcp MCP server.
+metadata:
+  author: woven-labs
+  version: "0.1"
+  site: https://sfx.woven.video
 ---
 
 # Woven SFX
@@ -14,20 +20,8 @@ Resolve and cache sound effects for video edits using the woven-sfx MCP server.
 
 ## Prerequisites
 
-MCP server configured with `sfx_resolve`, `sfx_pull`, and `sfx_list_installed`:
-
-```json
-{
-  "mcpServers": {
-    "woven-sfx": {
-      "command": "npx",
-      "args": ["-y", "woven-sfx-mcp"]
-    }
-  }
-}
-```
-
-Local library path: `~/.local/share/woven-sfx/library/`
+1. MCP server configured — see [references/mcp-setup.md](references/mcp-setup.md).
+2. Local library at `~/.local/share/woven-sfx/library/` — run `scripts/pull-library.sh` to prefetch, or let MCP tools pull on demand.
 
 ## Workflow
 
@@ -52,7 +46,7 @@ Examples:
 sfx_resolve({ transition: "whoosh" })
 ```
 
-Use the `suggested_volume` from each resolve response when writing SFX entries in the edit plan. Pairing logic lives in the MCP server — do not guess filenames or duplicate pairing tables.
+Use the `suggested_volume` from each resolve response when writing SFX entries in the edit plan. Pairing logic lives in the MCP server — see [references/pairings.md](references/pairings.md); do not guess filenames.
 
 Transitions like `fade` and `none` have no default SFX; skip them unless the user requests otherwise.
 

@@ -2,24 +2,33 @@
 
 Agent-first, open-source sound effects registry for video editing workflows.
 
-**Site:** [sfx.woven.video](https://sfx.woven.video)
+**Site:** [sfx.woven.video](https://sfx.woven.video) · **Skills:** [skills.sh](https://skills.sh)
 
 ## Install
 
 ```bash
-curl -fsSL https://sfx.woven.video/install.sh | bash
+npx skills add woven-labs/woven-sfx --skill woven-sfx -g -y
 ```
+
+Then add the MCP server (see `skills/woven-sfx/references/mcp-setup.md`) and optionally pull sounds:
+
+```bash
+bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh
+```
+
+**Advanced:** `curl -fsSL https://sfx.woven.video/install.sh | bash` — skill + library + MCP instructions in one shot.
 
 ## Monorepo layout
 
 ```
 woven-sfx/
+├── skills/
+│   └── woven-sfx/    # Agent skill (SKILL.md, scripts, references)
 ├── apps/
 │   └── web/          # Astro landing page (sfx.woven.video)
 ├── packages/
 │   ├── core/         # Catalog, resolve, pull — shared library
-│   ├── mcp/          # stdio MCP server
-│   └── skill/        # Agent skill (SKILL.md)
+│   └── mcp/          # stdio MCP server
 ├── catalog/          # Sound metadata (JSON)
 ├── sounds/           # Source .wav files
 └── scripts/          # Build catalog, generate peaks, install
@@ -31,6 +40,7 @@ woven-sfx/
 pnpm install
 pnpm build
 pnpm test
+pnpm sync:skill   # copy SKILL.md → apps/web/public/skill.md
 ```
 
 ### Waveform peaks

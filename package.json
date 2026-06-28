@@ -5,7 +5,8 @@
     "build": "pnpm -r build",
     "test": "pnpm -r test",
     "build:catalog": "tsx scripts/build-catalog.ts",
-    "generate:peaks": "tsx scripts/generate-peaks.ts"
+    "generate:peaks": "tsx scripts/generate-peaks.ts",
+    "sync:skill": "cp skills/woven-sfx/SKILL.md apps/web/public/skill.md && cp scripts/install.sh apps/web/public/install.sh"
   },
   "devDependencies": {
     "tsx": "^4.19.0",
