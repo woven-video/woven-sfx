@@ -56,16 +56,16 @@ pnpm generate:peaks
 wrangler login
 npm login
 
-# 2. Create R2 bucket + public domain sfx.woven.video (Cloudflare dashboard)
+# 2. Create R2 bucket for sound files
 wrangler r2 bucket create woven-sfx
 
-# 3. Upload audio + catalog to R2
+# 3. Upload .wav files to R2 (served at sfx.woven.video/sfx/* via Worker)
 pnpm upload:r2
 
 # 4. Publish MCP to npm
 cd packages/mcp && npm publish --access public
 
-# 5. Deploy landing
+# 5. Deploy landing (Workers — catalog, peaks, site; not .wav files)
 cd apps/web && pnpm deploy
 ```
 
@@ -95,17 +95,12 @@ pnpm deploy
 
 ### Sound files (R2)
 
-WAV files are served from Cloudflare R2 at `https://sfx.woven.video/sfx/{id}.wav`. Upload is manual for v0:
+WAV files live in R2 only. The Worker at `sfx.woven.video` proxies `/sfx/*` to the `woven-sfx` bucket. Landing, `catalog.json`, and peaks deploy with Workers static assets.
 
 ```bash
-# Authenticate once
-npx wrangler login
-
-# Upload each sound (repeat per file)
-npx wrangler r2 object put woven-sfx/sfx/fast-whoosh.wav --file=sounds/fast-whoosh.wav
+pnpm upload:r2   # uploads sounds/*.wav → R2
+cd apps/web && pnpm deploy
 ```
-
-Configure the R2 bucket for public access and bind the custom domain `sfx.woven.video` in the Cloudflare dashboard.
 
 ## License
 

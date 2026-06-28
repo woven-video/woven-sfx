@@ -1,5 +1,6 @@
 {
   "name": "woven-sfx",
+  "main": "src/worker.ts",
   "compatibility_date": "2026-06-28",
   "routes": [
     {
@@ -9,6 +10,13 @@
   ],
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
     "not_found_handling": "404-page"
-  }
+  },
+  "r2_buckets": [
+    {
+      "bucket_name": "woven-sfx",
+      "binding": "SFX_BUCKET"
+    }
+  ]
 }
