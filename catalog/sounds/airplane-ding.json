@@ -1,0 +1,9 @@
+{
+  "id": "airplane-ding",
+  "duration_ms": 500,
+  "tags": [
+    "ding",
+    "ambient"
+  ],
+  "default_volume": 0.4
+}

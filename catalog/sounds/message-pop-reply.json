@@ -1,0 +1,9 @@
+{
+  "id": "message-pop-reply",
+  "duration_ms": 500,
+  "tags": [
+    "pop",
+    "ui"
+  ],
+  "default_volume": 0.4
+}

@@ -1,0 +1,14 @@
+{
+  "id": "swish-whoosh-large",
+  "duration_ms": 500,
+  "tags": [
+    "whoosh",
+    "transition"
+  ],
+  "default_volume": 0.45,
+  "pairings": {
+    "transition": [
+      "pull-in"
+    ]
+  }
+}

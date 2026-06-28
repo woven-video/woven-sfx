@@ -1,0 +1,9 @@
+{
+  "id": "several-coins",
+  "duration_ms": 500,
+  "tags": [
+    "ui",
+    "ambient"
+  ],
+  "default_volume": 0.4
+}

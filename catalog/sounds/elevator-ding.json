@@ -1,0 +1,8 @@
+{
+  "id": "elevator-ding",
+  "duration_ms": 500,
+  "tags": [
+    "ding"
+  ],
+  "default_volume": 0.4
+}

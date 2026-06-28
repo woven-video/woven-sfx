@@ -1,0 +1,8 @@
+{
+  "id": "pop-hand",
+  "duration_ms": 500,
+  "tags": [
+    "pop"
+  ],
+  "default_volume": 0.4
+}

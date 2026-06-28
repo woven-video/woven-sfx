@@ -1,0 +1,15 @@
+{
+  "id": "fast-whoosh",
+  "duration_ms": 500,
+  "tags": [
+    "whoosh",
+    "transition"
+  ],
+  "default_volume": 0.45,
+  "pairings": {
+    "transition": [
+      "pull-out",
+      "whoosh"
+    ]
+  }
+}

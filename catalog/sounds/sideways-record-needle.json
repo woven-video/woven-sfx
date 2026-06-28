@@ -1,0 +1,14 @@
+{
+  "id": "sideways-record-needle",
+  "duration_ms": 500,
+  "tags": [
+    "glitch"
+  ],
+  "default_volume": 0.4,
+  "pairings": {
+    "transition": [
+      "glitch",
+      "tv-glitch"
+    ]
+  }
+}

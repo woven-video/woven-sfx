@@ -1,0 +1,14 @@
+{
+  "id": "camera-flash",
+  "duration_ms": 500,
+  "tags": [
+    "pop",
+    "camera"
+  ],
+  "default_volume": 0.4,
+  "pairings": {
+    "transition": [
+      "flash"
+    ]
+  }
+}

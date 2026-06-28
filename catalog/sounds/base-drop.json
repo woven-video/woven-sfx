@@ -1,0 +1,9 @@
+{
+  "id": "base-drop",
+  "duration_ms": 500,
+  "tags": [
+    "impact",
+    "bass"
+  ],
+  "default_volume": 0.55
+}

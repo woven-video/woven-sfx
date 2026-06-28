@@ -1,0 +1,9 @@
+{
+  "id": "money-chalking",
+  "duration_ms": 500,
+  "tags": [
+    "ui",
+    "impact"
+  ],
+  "default_volume": 0.4
+}

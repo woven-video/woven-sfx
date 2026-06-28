@@ -1,0 +1,367 @@
+{
+  "version": "1.0.0",
+  "sounds": [
+    {
+      "id": "airplane-ding",
+      "duration_ms": 500,
+      "tags": [
+        "ding",
+        "ambient"
+      ],
+      "default_volume": 0.4,
+      "file": "airplane-ding.wav",
+      "url": "https://sfx.woven.video/sfx/airplane-ding.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/airplane-ding.json"
+    },
+    {
+      "id": "base-drop",
+      "duration_ms": 500,
+      "tags": [
+        "impact",
+        "bass"
+      ],
+      "default_volume": 0.55,
+      "file": "base-drop.wav",
+      "url": "https://sfx.woven.video/sfx/base-drop.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/base-drop.json"
+    },
+    {
+      "id": "bass-impact",
+      "duration_ms": 500,
+      "tags": [
+        "impact",
+        "bass"
+      ],
+      "default_volume": 0.55,
+      "file": "bass-impact.wav",
+      "url": "https://sfx.woven.video/sfx/bass-impact.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/bass-impact.json"
+    },
+    {
+      "id": "beep-short",
+      "duration_ms": 500,
+      "tags": [
+        "ui"
+      ],
+      "default_volume": 0.35,
+      "file": "beep-short.wav",
+      "url": "https://sfx.woven.video/sfx/beep-short.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/beep-short.json"
+    },
+    {
+      "id": "camera-analog",
+      "duration_ms": 500,
+      "tags": [
+        "camera",
+        "ui"
+      ],
+      "default_volume": 0.4,
+      "file": "camera-analog.wav",
+      "url": "https://sfx.woven.video/sfx/camera-analog.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/camera-analog.json"
+    },
+    {
+      "id": "camera-flash",
+      "duration_ms": 500,
+      "tags": [
+        "pop",
+        "camera"
+      ],
+      "default_volume": 0.4,
+      "pairings": {
+        "transition": [
+          "flash"
+        ]
+      },
+      "file": "camera-flash.wav",
+      "url": "https://sfx.woven.video/sfx/camera-flash.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/camera-flash.json"
+    },
+    {
+      "id": "camera-shutter-release",
+      "duration_ms": 500,
+      "tags": [
+        "camera",
+        "ui"
+      ],
+      "default_volume": 0.4,
+      "file": "camera-shutter-release.wav",
+      "url": "https://sfx.woven.video/sfx/camera-shutter-release.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/camera-shutter-release.json"
+    },
+    {
+      "id": "deep-whoosh",
+      "duration_ms": 500,
+      "tags": [
+        "whoosh",
+        "transition"
+      ],
+      "default_volume": 0.45,
+      "pairings": {
+        "transition": [
+          "whoosh"
+        ]
+      },
+      "file": "deep-whoosh.wav",
+      "url": "https://sfx.woven.video/sfx/deep-whoosh.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/deep-whoosh.json"
+    },
+    {
+      "id": "dj-scratch",
+      "duration_ms": 500,
+      "tags": [
+        "glitch"
+      ],
+      "default_volume": 0.4,
+      "pairings": {
+        "transition": [
+          "glitch",
+          "tv-glitch"
+        ]
+      },
+      "file": "dj-scratch.wav",
+      "url": "https://sfx.woven.video/sfx/dj-scratch.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/dj-scratch.json"
+    },
+    {
+      "id": "elevator-ding",
+      "duration_ms": 500,
+      "tags": [
+        "ding"
+      ],
+      "default_volume": 0.4,
+      "file": "elevator-ding.wav",
+      "url": "https://sfx.woven.video/sfx/elevator-ding.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/elevator-ding.json"
+    },
+    {
+      "id": "fast-whoosh",
+      "duration_ms": 500,
+      "tags": [
+        "whoosh",
+        "transition"
+      ],
+      "default_volume": 0.45,
+      "pairings": {
+        "transition": [
+          "pull-out",
+          "whoosh"
+        ]
+      },
+      "file": "fast-whoosh.wav",
+      "url": "https://sfx.woven.video/sfx/fast-whoosh.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/fast-whoosh.json"
+    },
+    {
+      "id": "frog-ribbit",
+      "duration_ms": 500,
+      "tags": [
+        "ambient",
+        "novelty"
+      ],
+      "default_volume": 0.35,
+      "file": "frog-ribbit.wav",
+      "url": "https://sfx.woven.video/sfx/frog-ribbit.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/frog-ribbit.json"
+    },
+    {
+      "id": "glitch-logo",
+      "duration_ms": 500,
+      "tags": [
+        "glitch"
+      ],
+      "default_volume": 0.4,
+      "pairings": {
+        "transition": [
+          "glitch",
+          "tv-glitch"
+        ]
+      },
+      "file": "glitch-logo.wav",
+      "url": "https://sfx.woven.video/sfx/glitch-logo.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/glitch-logo.json"
+    },
+    {
+      "id": "keyboard-typing",
+      "duration_ms": 500,
+      "tags": [
+        "ui"
+      ],
+      "default_volume": 0.35,
+      "file": "keyboard-typing.wav",
+      "url": "https://sfx.woven.video/sfx/keyboard-typing.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/keyboard-typing.json"
+    },
+    {
+      "id": "keyboard-typing-realistic",
+      "duration_ms": 500,
+      "tags": [
+        "ui"
+      ],
+      "default_volume": 0.35,
+      "file": "keyboard-typing-realistic.wav",
+      "url": "https://sfx.woven.video/sfx/keyboard-typing-realistic.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/keyboard-typing-realistic.json"
+    },
+    {
+      "id": "message-pop-reply",
+      "duration_ms": 500,
+      "tags": [
+        "pop",
+        "ui"
+      ],
+      "default_volume": 0.4,
+      "file": "message-pop-reply.wav",
+      "url": "https://sfx.woven.video/sfx/message-pop-reply.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/message-pop-reply.json"
+    },
+    {
+      "id": "money-chalking",
+      "duration_ms": 500,
+      "tags": [
+        "ui",
+        "impact"
+      ],
+      "default_volume": 0.4,
+      "file": "money-chalking.wav",
+      "url": "https://sfx.woven.video/sfx/money-chalking.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/money-chalking.json"
+    },
+    {
+      "id": "mouse-click-1",
+      "duration_ms": 500,
+      "tags": [
+        "ui"
+      ],
+      "default_volume": 0.3,
+      "file": "mouse-click-1.wav",
+      "url": "https://sfx.woven.video/sfx/mouse-click-1.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/mouse-click-1.json"
+    },
+    {
+      "id": "mouse-click-2",
+      "duration_ms": 500,
+      "tags": [
+        "ui"
+      ],
+      "default_volume": 0.3,
+      "file": "mouse-click-2.wav",
+      "url": "https://sfx.woven.video/sfx/mouse-click-2.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/mouse-click-2.json"
+    },
+    {
+      "id": "notification-ding",
+      "duration_ms": 500,
+      "tags": [
+        "ding",
+        "ui"
+      ],
+      "default_volume": 0.4,
+      "file": "notification-ding.wav",
+      "url": "https://sfx.woven.video/sfx/notification-ding.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/notification-ding.json"
+    },
+    {
+      "id": "pop-hand",
+      "duration_ms": 500,
+      "tags": [
+        "pop"
+      ],
+      "default_volume": 0.4,
+      "file": "pop-hand.wav",
+      "url": "https://sfx.woven.video/sfx/pop-hand.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/pop-hand.json"
+    },
+    {
+      "id": "record-needle-scratch",
+      "duration_ms": 500,
+      "tags": [
+        "glitch"
+      ],
+      "default_volume": 0.4,
+      "pairings": {
+        "transition": [
+          "glitch",
+          "tv-glitch"
+        ]
+      },
+      "file": "record-needle-scratch.wav",
+      "url": "https://sfx.woven.video/sfx/record-needle-scratch.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/record-needle-scratch.json"
+    },
+    {
+      "id": "record-scratch",
+      "duration_ms": 500,
+      "tags": [
+        "glitch"
+      ],
+      "default_volume": 0.4,
+      "pairings": {
+        "transition": [
+          "glitch",
+          "tv-glitch"
+        ]
+      },
+      "file": "record-scratch.wav",
+      "url": "https://sfx.woven.video/sfx/record-scratch.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/record-scratch.json"
+    },
+    {
+      "id": "several-coins",
+      "duration_ms": 500,
+      "tags": [
+        "ui",
+        "ambient"
+      ],
+      "default_volume": 0.4,
+      "file": "several-coins.wav",
+      "url": "https://sfx.woven.video/sfx/several-coins.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/several-coins.json"
+    },
+    {
+      "id": "sideways-record-needle",
+      "duration_ms": 500,
+      "tags": [
+        "glitch"
+      ],
+      "default_volume": 0.4,
+      "pairings": {
+        "transition": [
+          "glitch",
+          "tv-glitch"
+        ]
+      },
+      "file": "sideways-record-needle.wav",
+      "url": "https://sfx.woven.video/sfx/sideways-record-needle.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/sideways-record-needle.json"
+    },
+    {
+      "id": "swish-whoosh-large",
+      "duration_ms": 500,
+      "tags": [
+        "whoosh",
+        "transition"
+      ],
+      "default_volume": 0.45,
+      "pairings": {
+        "transition": [
+          "pull-in"
+        ]
+      },
+      "file": "swish-whoosh-large.wav",
+      "url": "https://sfx.woven.video/sfx/swish-whoosh-large.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/swish-whoosh-large.json"
+    },
+    {
+      "id": "tick-sound",
+      "duration_ms": 500,
+      "tags": [
+        "ui"
+      ],
+      "default_volume": 0.3,
+      "file": "tick-sound.wav",
+      "url": "https://sfx.woven.video/sfx/tick-sound.wav",
+      "peaks_url": "https://sfx.woven.video/peaks/tick-sound.json"
+    }
+  ]
+}
