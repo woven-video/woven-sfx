@@ -1,0 +1,14 @@
+# Woven SFX
+> Open source sound effects for AI agents.
+
+## Install
+curl -fsSL https://sfx.woven.video/install.sh | bash
+
+## Catalog
+https://sfx.woven.video/catalog.json
+
+## MCP tools
+sfx_search, sfx_pull, sfx_resolve, sfx_list_installed
+
+## Skill
+~/.claude/skills/woven-sfx/SKILL.md

@@ -4,6 +4,7 @@ import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import Hero from "../components/Hero.astro";
 import CatalogSection from "../components/CatalogSection.tsx";
+import AgentDocsStrip from "../components/AgentDocsStrip.astro";
 ---
 
 <html lang="en">
@@ -24,6 +25,7 @@ import CatalogSection from "../components/CatalogSection.tsx";
     <main>
       <Hero />
       <CatalogSection client:load />
+      <AgentDocsStrip />
     </main>
     <SiteFooter />
   </body>
