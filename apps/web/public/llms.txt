@@ -2,7 +2,7 @@
 > Open source sound effects for AI agents.
 
 ## Install
-npx skills add woven-video/woven-sfx --skill woven-sfx -g -y
+npx skills add woven-video/skills --skill woven-sfx -g -y
 
 ## Also setup
 MCP: npx -y woven-sfx-mcp (see skills/woven-sfx/references/mcp-setup.md)

@@ -2,12 +2,12 @@
 
 Agent-first, open-source sound effects registry for video editing workflows.
 
-**Site:** [sfx.woven.video](https://sfx.woven.video) · **Skills:** [skills.sh](https://skills.sh)
+**Site:** [sfx.woven.video](https://sfx.woven.video) · **Skill:** [skills.sh/woven-video/skills/woven-sfx](https://skills.sh/woven-video/skills/woven-sfx)
 
 ## Install
 
 ```bash
-npx skills add woven-video/woven-sfx --skill woven-sfx -g -y
+npx skills add woven-video/skills --skill woven-sfx -g -y
 ```
 
 Then add the MCP server (see `skills/woven-sfx/references/mcp-setup.md`) and pull sounds into your project:
@@ -26,7 +26,7 @@ Sounds land in `./sounds/sfx/` by default, or wherever `sfx-library` points in `
 ```
 woven-sfx/
 ├── skills/
-│   └── woven-sfx/    # Agent skill (SKILL.md, scripts, references)
+│   └── woven-sfx/    # Skill source — sync to woven-video/skills for skills.sh
 ├── apps/
 │   └── web/          # Astro landing page (sfx.woven.video)
 ├── packages/
@@ -44,9 +44,24 @@ pnpm install
 pnpm build
 pnpm test
 pnpm sync:skill      # copy SKILL.md → apps/web/public/skill.md
+pnpm sync:skills-repo  # copy skill → ../woven-video-skills for skills.sh
 pnpm seed:sounds     # generate v0 placeholder .wav files (replace with finals later)
 pnpm update:durations
 pnpm generate:peaks
+```
+
+### Local site
+
+**Why Astro?** Static landing page (hero, catalog, docs) built to `dist/` and served by the Cloudflare Worker alongside `catalog.json` and peaks. React islands handle the interactive catalog. Astro keeps the marketing shell fast and deployable as static assets.
+
+**Audio lives in R2 only** — the Worker proxies `/sfx/*` to the `woven-sfx` bucket. Local dev hits the same bucket; no copied WAVs, no local R2 simulation.
+
+```bash
+# UI work (most of the time): Astro HMR, /sfx/* proxied to sfx.woven.video
+cd apps/web && pnpm dev:ui
+
+# Full Worker stack locally: wrangler dev with remote R2 binding (needs wrangler login)
+cd apps/web && pnpm dev
 ```
 
 ### Ship checklist
