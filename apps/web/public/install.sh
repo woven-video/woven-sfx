@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CDN="${SFX_CDN_BASE:-https://sfx.woven.video}"
-
 echo "Installing woven-sfx skill via skills CLI..."
 npx skills add woven-video/skills --skill woven-sfx -g -y
 

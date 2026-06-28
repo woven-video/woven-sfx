@@ -5,6 +5,19 @@ import { isAbsolute, join, resolve } from "node:path";
 /** Default when no project.md or env override — relative to process cwd. */
 export const DEFAULT_LIBRARY_RELATIVE = "sounds/sfx";
 
+export const DEFAULT_CDN_BASE = "https://assets.sfx.woven.video";
+
+/** Turn catalog-relative paths into absolute CDN URLs for fetch/pull. */
+export function resolveAssetUrl(
+  url: string,
+  cdnBase: string = process.env.SFX_CDN_BASE ?? DEFAULT_CDN_BASE,
+): string {
+  if (url.startsWith("/")) {
+    return `${cdnBase.replace(/\/+$/, "")}${url}`;
+  }
+  return url;
+}
+
 export function expandHome(path: string): string {
   if (path === "~") return homedir();
   if (path.startsWith("~/")) return join(homedir(), path.slice(2));

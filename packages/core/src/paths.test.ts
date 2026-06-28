@@ -6,13 +6,17 @@ import {
   DEFAULT_LIBRARY_RELATIVE,
   findProjectSfxLibrary,
   getSfxLibrary,
+  resolveAssetUrl,
 } from "./paths.js";
 
 const originalEnv = process.env.WOVEN_SFX_LIBRARY;
+const originalCdnBase = process.env.SFX_CDN_BASE;
 
 afterEach(() => {
   if (originalEnv === undefined) delete process.env.WOVEN_SFX_LIBRARY;
   else process.env.WOVEN_SFX_LIBRARY = originalEnv;
+  if (originalCdnBase === undefined) delete process.env.SFX_CDN_BASE;
+  else process.env.SFX_CDN_BASE = originalCdnBase;
 });
 
 describe("paths", () => {
@@ -49,5 +53,25 @@ describe("paths", () => {
     );
 
     expect(findProjectSfxLibrary(root)).toMatch(/remotion\/shared-assets\/sfx$/);
+  });
+
+  it("resolves root-relative asset URLs to the public R2 asset domain by default", () => {
+    expect(resolveAssetUrl("/sfx/airplane-ding.wav")).toBe(
+      "https://assets.sfx.woven.video/sfx/airplane-ding.wav",
+    );
+  });
+
+  it("respects SFX_CDN_BASE for root-relative asset URLs", () => {
+    process.env.SFX_CDN_BASE = "https://example.test/base/";
+
+    expect(resolveAssetUrl("/sfx/airplane-ding.wav")).toBe(
+      "https://example.test/base/sfx/airplane-ding.wav",
+    );
+  });
+
+  it("leaves absolute asset URLs unchanged", () => {
+    expect(resolveAssetUrl("https://cdn.example.test/sfx/airplane-ding.wav")).toBe(
+      "https://cdn.example.test/sfx/airplane-ding.wav",
+    );
   });
 });

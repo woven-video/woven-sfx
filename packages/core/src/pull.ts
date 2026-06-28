@@ -1,6 +1,6 @@
 import { mkdir, writeFile, access } from "node:fs/promises";
 import { join } from "node:path";
-import { getSfxLibrary } from "./paths.js";
+import { getSfxLibrary, resolveAssetUrl } from "./paths.js";
 import type { Catalog, Sound } from "./types.js";
 
 export async function fileExists(path: string): Promise<boolean> {
@@ -18,8 +18,11 @@ export async function pullSound(sound: Sound): Promise<string> {
   const dest = join(dir, sound.file);
   if (await fileExists(dest)) return dest;
 
-  const res = await fetch(sound.url);
-  if (!res.ok) throw new Error(`Failed to download ${sound.url}: ${res.status}`);
+  const downloadUrl = resolveAssetUrl(sound.url);
+  const res = await fetch(downloadUrl);
+  if (!res.ok) {
+    throw new Error(`Failed to download ${downloadUrl}: ${res.status}`);
+  }
   const buf = Buffer.from(await res.arrayBuffer());
   await writeFile(dest, buf);
   return dest;

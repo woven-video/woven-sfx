@@ -1,6 +1,14 @@
 .superpowers/
+.agents/
 node_modules/
 dist/
 .dist/
 apps/web/.wrangler/
 apps/web/public/sfx/
+docs/superpowers/research/*.md
+packages/mcp/*.tgz
+skills-lock.json
+sounds/sfx/
+/--full-page
+/install-*.png
+/landing-*.png

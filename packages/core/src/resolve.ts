@@ -1,7 +1,7 @@
 import { join } from "node:path";
 import { TRANSITION_NONE, TRANSITION_PRIMARY } from "./pairings.js";
 import type { Catalog, ResolvedSound } from "./types.js";
-import { getSfxLibrary } from "./paths.js";
+import { getSfxLibrary, resolveAssetUrl } from "./paths.js";
 
 export function resolveForTransition(
   catalog: Catalog,
@@ -21,7 +21,7 @@ export function resolveForTransition(
     file: sound.file,
     duration_ms: sound.duration_ms,
     suggested_volume: sound.default_volume,
-    url: sound.url,
+    url: resolveAssetUrl(sound.url),
   };
 }
 

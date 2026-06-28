@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CDN="${SFX_CDN_BASE:-https://sfx.woven.video}"
-
 echo "Installing woven-sfx skill via skills CLI..."
 npx skills add woven-video/skills --skill woven-sfx -g -y
 
@@ -17,14 +15,15 @@ else
   echo "Pull script not found at $PULL_SCRIPT — run it manually after cd'ing to your project."
 fi
 
-cat <<EOF
+cat <<'EOF'
 
-✓ Woven SFX installed
+✓ Woven SFX skill installed
 
-  Skill:   $SKILL_DIR
-  Sounds:  project-local (see .claude/project.md sfx-library or ./sounds/sfx/)
+Next: add the MCP server (required for sfx_* tools)
 
-Add MCP to ~/.cursor/mcp.json (or Claude Desktop config):
+  Cursor:         ~/.cursor/mcp.json
+  Claude Code:    .mcp.json in your project
+  Claude Desktop: Settings → Developer → MCP
 
 {
   "mcpServers": {
@@ -35,5 +34,8 @@ Add MCP to ~/.cursor/mcp.json (or Claude Desktop config):
   }
 }
 
-Catalog: $CDN/catalog.json
+Merge into existing mcpServers if needed. Restart your agent.
+
+Full paths: ~/.agents/skills/woven-sfx/references/mcp-setup.md
+Catalog:    https://sfx.woven.video/catalog.json
 EOF
