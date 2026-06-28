@@ -1,0 +1,15 @@
+{
+  "name": "woven-sfx",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "build:catalog": "tsx scripts/build-catalog.ts",
+    "generate:peaks": "tsx scripts/generate-peaks.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
