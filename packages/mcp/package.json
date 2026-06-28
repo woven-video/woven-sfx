@@ -1,6 +1,6 @@
 {
   "name": "woven-sfx-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "stdio MCP server for the Woven SFX catalog",
   "type": "module",
   "repository": {
