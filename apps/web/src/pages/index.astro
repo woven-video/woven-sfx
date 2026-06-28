@@ -3,6 +3,7 @@ import "../styles/global.css";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import Hero from "../components/Hero.astro";
+import CatalogSection from "../components/CatalogSection.tsx";
 ---
 
 <html lang="en">
@@ -22,6 +23,7 @@ import Hero from "../components/Hero.astro";
     <SiteHeader />
     <main>
       <Hero />
+      <CatalogSection client:load />
     </main>
     <SiteFooter />
   </body>
