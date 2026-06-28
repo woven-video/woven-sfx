@@ -24,6 +24,25 @@ importers:
         specifier: ^3.0.0
         version: 3.2.6(@types/node@22.20.0)(tsx@4.22.4)
 
+  packages/mcp:
+    dependencies:
+      '@modelcontextprotocol/server':
+        specifier: 2.0.0-alpha.3
+        version: 2.0.0-alpha.3
+      '@woven-sfx/core':
+        specifier: workspace:*
+        version: link:../core
+      zod:
+        specifier: ^4.2.0
+        version: 4.4.3
+    devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.20.0
+      typescript:
+        specifier: ^5.8.0
+        version: 5.9.3
+
 packages:
 
   '@esbuild/aix-ppc64@0.28.1':
@@ -184,6 +203,10 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
+  '@modelcontextprotocol/server@2.0.0-alpha.3':
+    resolution: {integrity: sha512-PYdVDA6x3joCy/rw1mGdMSvqisPKlmt5QN/ILcT8R7efgvmhij14L87lJrWAm4pszaThzwpV49BmBBTZWtlY3A==}
+    engines: {node: '>=20'}
 
   '@rollup/rollup-android-arm-eabi@4.62.2':
     resolution: {integrity: sha512-6o7ZLZK+BeenkZCFNDXqpbjw9bD6nuWonvS/lwQJp7NoVVxm6p3qE7qQ5jGuBjiFsgvqjD8mZAU5oWxTmbOeOg==}
@@ -578,6 +601,9 @@ packages:
     engines: {node: '>=8'}
     hasBin: true
 
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
+
 snapshots:
 
   '@esbuild/aix-ppc64@0.28.1':
@@ -659,6 +685,10 @@ snapshots:
     optional: true
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
+
+  '@modelcontextprotocol/server@2.0.0-alpha.3':
+    dependencies:
+      zod: 4.4.3
 
   '@rollup/rollup-android-arm-eabi@4.62.2':
     optional: true
@@ -1027,3 +1057,5 @@ snapshots:
     dependencies:
       siginfo: 2.0.0
       stackback: 0.0.2
+
+  zod@4.4.3: {}
