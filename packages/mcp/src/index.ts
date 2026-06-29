@@ -3,14 +3,13 @@ import { StdioServerTransport } from "@modelcontextprotocol/server/stdio";
 import { z } from "zod";
 import {
   searchCatalog,
-  resolveForTransition,
   pullSound,
   findSoundById,
   listInstalled,
 } from "@woven-sfx/core";
 import { loadCatalog } from "./catalog-loader.js";
 
-const server = new McpServer({ name: "woven-sfx", version: "0.1.0" });
+const server = new McpServer({ name: "woven-sfx", version: "0.2.0" });
 
 function textResult(obj: unknown) {
   return { content: [{ type: "text" as const, text: JSON.stringify(obj, null, 2) }] };
@@ -19,12 +18,13 @@ function textResult(obj: unknown) {
 server.registerTool(
   "sfx_search",
   {
-    title: "Search SFX catalog",
-    description: "Search Woven SFX by tag, transition pairing, or query string",
+    title: "Search sound effects",
+    description:
+      "Search Woven SFX directly by normal words, sound id, or tag. Use this first to find sound effects such as beep, camera shutter, glitch, pop, impact, or whoosh.",
     inputSchema: z.object({
-      tag: z.string().optional(),
-      transition: z.string().optional(),
       query: z.string().optional(),
+      tag: z.string().optional(),
+      limit: z.number().int().positive().max(50).optional(),
     }),
   },
   async (input) => {
@@ -47,31 +47,6 @@ server.registerTool(
     if (!sound) return textResult({ error: `Unknown sound: ${id}` });
     const localPath = await pullSound(sound);
     return textResult({ id, localPath, file: sound.file });
-  },
-);
-
-server.registerTool(
-  "sfx_resolve",
-  {
-    title: "Resolve SFX for transition",
-    description: "Resolve and download the best SFX for a video transition type",
-    inputSchema: z.object({
-      transition: z.string(),
-      moment: z.string().optional(),
-    }),
-  },
-  async ({ transition }) => {
-    const catalog = await loadCatalog();
-    const resolved = resolveForTransition(catalog, transition);
-    if (!resolved) {
-      return textResult({
-        error: `No default SFX for transition: ${transition}`,
-        suggestions: searchCatalog(catalog, { transition }),
-      });
-    }
-    const sound = findSoundById(catalog, resolved.id)!;
-    const localPath = await pullSound(sound);
-    return textResult({ ...resolved, localPath });
   },
 );
 

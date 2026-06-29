@@ -1,6 +1,6 @@
 {
   "name": "woven-sfx-mcp",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "stdio MCP server for the Woven SFX catalog",
   "type": "module",
   "repository": {
@@ -25,7 +25,8 @@
     "build": "tsc",
     "build:bundle": "node scripts/build-bundle.mjs",
     "prepublishOnly": "pnpm --filter @woven-sfx/core build && pnpm build:bundle",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.0.0-alpha.3",
