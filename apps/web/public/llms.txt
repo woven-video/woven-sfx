@@ -20,7 +20,7 @@ Sounds: cd your-project && bash ~/.agents/skills/woven-sfx/scripts/pull-library.
 https://sfx.woven.video/catalog.json
 
 ## MCP tools
-sfx_search, sfx_pull, sfx_resolve, sfx_list_installed
+sfx_search, sfx_pull, sfx_list_installed
 
 ## Skill
 ~/.agents/skills/woven-sfx/SKILL.md
