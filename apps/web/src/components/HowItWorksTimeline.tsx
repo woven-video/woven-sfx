@@ -4,7 +4,7 @@ const steps = [
   {
     title: "Install skill",
     description:
-      "npx skills add woven-video/skills --skill add-sfx - workflow lands in ~/.agents/skills/add-sfx/",
+      "npx skills add woven-video/skills --skill add-sfx",
     code: false,
   },
   {
@@ -31,7 +31,7 @@ const steps = [
 ] as const;
 
 const paths = [
-  { label: "Skill", value: "~/.agents/skills/add-sfx/" },
+  { label: "Skill", value: "./.agents/skills/add-sfx/" },
   { label: "MCP", value: "woven-sfx-mcp" },
   { label: "Sounds", value: "./sounds/sfx/" },
 ] as const;

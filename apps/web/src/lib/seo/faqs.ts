@@ -15,7 +15,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     q: "How do I install Woven SFX for my AI agent?",
-    a: "Run: npx skills add woven-video/skills --skill add-sfx -g -y. Then add the woven-sfx-mcp server to your MCP config and pull sounds with scripts/pull-library.sh or on-demand via sfx_search and sfx_pull.",
+    a: "Run: npx skills add woven-video/skills --skill add-sfx and choose your agent, or use --agent codex -y, --agent claude-code -y, or --agent cursor -y for a non-interactive install. Then add the woven-sfx-mcp server to your MCP config and pull sounds with scripts/pull-library.sh or on-demand via sfx_search and sfx_pull.",
   },
   {
     q: "What MCP tools does woven-sfx provide?",

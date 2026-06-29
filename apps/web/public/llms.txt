@@ -2,14 +2,17 @@
 > Woven SFX is an open-source sound effects registry for AI agents — one skill install, MCP tools to search and pull .wav files, and a browsable catalog at sfx.woven.video.
 
 ## Install
-npx skills add woven-video/skills --skill add-sfx -g -y
+npx skills add woven-video/skills --skill add-sfx
+Codex: npx skills add woven-video/skills --skill add-sfx --agent codex -y
+Claude Code: npx skills add woven-video/skills --skill add-sfx --agent claude-code -y
+Cursor: npx skills add woven-video/skills --skill add-sfx --agent cursor -y
 https://www.skills.sh/woven-video/skills/add-sfx
 
 ## MCP setup (required)
 Skill install does not add MCP. Add woven-sfx-mcp to your agent config, then restart.
 Cursor: ~/.cursor/mcp.json | Claude Code: .mcp.json | Claude Desktop: Settings → Developer → MCP
-See ~/.agents/skills/add-sfx/references/mcp-setup.md
-Sounds: cd your-project && bash ~/.agents/skills/add-sfx/scripts/pull-library.sh
+See ./.agents/skills/add-sfx/references/mcp-setup.md for project installs
+Sounds: cd your-project && bash ./.agents/skills/add-sfx/scripts/pull-library.sh
 
 ## Sound library path
 1. WOVEN_SFX_LIBRARY env
@@ -23,4 +26,4 @@ https://sfx.woven.video/catalog.json
 sfx_search, sfx_pull, sfx_list_installed
 
 ## Skill
-~/.agents/skills/add-sfx/SKILL.md
+./.agents/skills/add-sfx/SKILL.md

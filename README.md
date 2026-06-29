@@ -7,14 +7,14 @@ Agent-first, open-source sound effects registry for video editing workflows.
 ## Install
 
 ```bash
-npx skills add woven-video/skills --skill add-sfx -g -y
+npx skills add woven-video/skills --skill add-sfx
 ```
 
-Then add the MCP server (see `skills/add-sfx/references/mcp-setup.md`) and pull sounds into your project:
+The CLI will ask where to install. For a non-interactive install, add `--agent codex -y`, `--agent claude-code -y`, or `--agent cursor -y`. Then add the MCP server (see `skills/add-sfx/references/mcp-setup.md`) and pull sounds into your project:
 
 ```bash
 cd your-reel-project
-bash ~/.agents/skills/add-sfx/scripts/pull-library.sh
+bash ./.agents/skills/add-sfx/scripts/pull-library.sh
 ```
 
 Sounds land in `./sounds/sfx/` by default, or wherever `sfx-library` points in `.claude/project.md`.

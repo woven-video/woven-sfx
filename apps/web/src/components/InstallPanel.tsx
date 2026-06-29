@@ -8,9 +8,15 @@ import McpSetupGuide from "./McpSetupGuide";
 import McpToolsList from "./McpToolsList";
 
 const INSTALL_CMD =
-  "npx skills add woven-video/skills --skill add-sfx -g -y";
+  "npx skills add woven-video/skills --skill add-sfx";
+const CODEX_INSTALL_CMD =
+  "npx skills add woven-video/skills --skill add-sfx --agent codex -y";
+const CLAUDE_INSTALL_CMD =
+  "npx skills add woven-video/skills --skill add-sfx --agent claude-code -y";
+const CURSOR_INSTALL_CMD =
+  "npx skills add woven-video/skills --skill add-sfx --agent cursor -y";
 const PULL_CMD =
-  "cd your-project && bash ~/.agents/skills/add-sfx/scripts/pull-library.sh";
+  "bash ./.agents/skills/add-sfx/scripts/pull-library.sh";
 const CURL_INSTALL_CMD =
   "curl -fsSL https://sfx.woven.video/install.sh | bash";
 
@@ -181,6 +187,36 @@ export default function InstallPanel() {
 
               <div className="flex flex-col gap-3 border-t border-border/60 pt-5">
                 <p className="text-xs font-medium text-muted-foreground">
+                  Non-interactive install
+                </p>
+                <CommandStrip
+                  copyText={CODEX_INSTALL_CMD}
+                  copyLabel="Codex install command"
+                >
+                  <code className="block font-mono text-xs leading-relaxed break-words text-foreground">
+                    {CODEX_INSTALL_CMD}
+                  </code>
+                </CommandStrip>
+                <CommandStrip
+                  copyText={CLAUDE_INSTALL_CMD}
+                  copyLabel="Claude Code install command"
+                >
+                  <code className="block font-mono text-xs leading-relaxed break-words text-foreground">
+                    {CLAUDE_INSTALL_CMD}
+                  </code>
+                </CommandStrip>
+                <CommandStrip
+                  copyText={CURSOR_INSTALL_CMD}
+                  copyLabel="Cursor install command"
+                >
+                  <code className="block font-mono text-xs leading-relaxed break-words text-foreground">
+                    {CURSOR_INSTALL_CMD}
+                  </code>
+                </CommandStrip>
+              </div>
+
+              <div className="flex flex-col gap-3 border-t border-border/60 pt-5">
+                <p className="text-xs font-medium text-muted-foreground">
                   Pull sound library (optional)
                 </p>
                 <CommandStrip
@@ -208,7 +244,8 @@ export default function InstallPanel() {
                 </code>
               </CommandStrip>
               <p className="text-xs leading-relaxed text-muted-foreground">
-                Installs the skill and pulls sounds. Open MCP setup for step 2.
+                Prompts for an agent, installs the skill, and pulls sounds.
+                Open MCP setup for step 2.
               </p>
             </div>
           ) : null}
