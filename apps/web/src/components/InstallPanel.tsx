@@ -17,14 +17,11 @@ const CURSOR_INSTALL_CMD =
   "npx skills add woven-video/skills --skill add-sfx --agent cursor -y";
 const PULL_CMD =
   "bash ./.agents/skills/add-sfx/scripts/pull-library.sh";
-const CURL_INSTALL_CMD =
-  "curl -fsSL https://sfx.woven.video/install.sh | bash";
 
-type OpenPanel = "mcp" | "curl" | "how" | null;
+type OpenPanel = "mcp" | "how" | null;
 
 const panelTitles: Record<Exclude<OpenPanel, null>, string> = {
   mcp: "MCP setup",
-  curl: "Curl install",
   how: "How it works",
 };
 
@@ -162,15 +159,6 @@ export default function InstallPanel() {
 
         <div className="flex flex-wrap items-center gap-x-1 gap-y-1">
           <DropdownTrigger
-            label="Curl install"
-            open={openPanel === "curl"}
-            onClick={() => togglePanel("curl")}
-            secondary
-          />
-          <span className="text-muted-foreground/40" aria-hidden="true">
-            ·
-          </span>
-          <DropdownTrigger
             label="How it works"
             open={openPanel === "how"}
             onClick={() => togglePanel("how")}
@@ -231,23 +219,6 @@ export default function InstallPanel() {
 
               <McpToolsList compact />
             </>
-          ) : null}
-
-          {openPanel === "curl" ? (
-            <div className="flex flex-col gap-3">
-              <CommandStrip
-                copyText={CURL_INSTALL_CMD}
-                copyLabel="curl install command"
-              >
-                <code className="block font-mono text-xs leading-relaxed break-words text-foreground">
-                  {CURL_INSTALL_CMD}
-                </code>
-              </CommandStrip>
-              <p className="text-xs leading-relaxed text-muted-foreground">
-                Prompts for an agent, installs the skill, and pulls sounds.
-                Open MCP setup for step 2.
-              </p>
-            </div>
           ) : null}
 
           {openPanel === "how" ? <HowItWorksTimeline compact /> : null}

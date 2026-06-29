@@ -18,4 +18,4 @@ export const ANSWER_FIRST =
 /** Bump when landing copy, catalog, or install flow changes materially. */
 export const SITE_CONTENT_UPDATED = "2026-06-29";
 
-export const OG_IMAGE_URL = `${SITE_URL}/og-image.png?v=20260629`;
+export const OG_IMAGE_URL = `${SITE_URL}/og-image.png?v=20260629-2`;
