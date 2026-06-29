@@ -16,7 +16,7 @@ mkdir -p "$DEST/scripts" "$DEST/references"
 cp "$SRC/SKILL.md" "$DEST/SKILL.md"
 cp "$SRC/scripts/pull-library.sh" "$DEST/scripts/pull-library.sh"
 cp "$SRC/references/mcp-setup.md" "$DEST/references/mcp-setup.md"
-cp "$SRC/references/pairings.md" "$DEST/references/pairings.md"
+rm -f "$DEST/references/pairings.md"
 chmod +x "$DEST/scripts/pull-library.sh"
 
 echo "Synced skill → $DEST"
