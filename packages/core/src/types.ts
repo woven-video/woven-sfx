@@ -13,12 +13,3 @@ export type Catalog = {
   version: string;
   sounds: Sound[];
 };
-
-export type ResolvedSound = {
-  id: string;
-  file: string;
-  localPath: string;
-  duration_ms: number;
-  suggested_volume: number;
-  url: string;
-};
