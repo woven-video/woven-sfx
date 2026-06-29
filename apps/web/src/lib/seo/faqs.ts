@@ -15,11 +15,11 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     q: "How do I install Woven SFX for my AI agent?",
-    a: "Run: npx skills add woven-video/skills --skill woven-sfx -g -y. Then add the woven-sfx-mcp server to your MCP config and pull sounds with scripts/pull-library.sh or on-demand via sfx_pull and sfx_resolve.",
+    a: "Run: npx skills add woven-video/skills --skill woven-sfx -g -y. Then add the woven-sfx-mcp server to your MCP config and pull sounds with scripts/pull-library.sh or on-demand via sfx_search and sfx_pull.",
   },
   {
     q: "What MCP tools does woven-sfx provide?",
-    a: "Four tools: sfx_search (find sounds by tag or query), sfx_resolve (pick and pull the best sound for a transition type), sfx_pull (download a sound by id), and sfx_list_installed (list cached .wav files in your project library).",
+    a: "Three tools: sfx_search (find sounds by normal words, id, or tag), sfx_pull (download a selected sound by id), and sfx_list_installed (list cached .wav files in your project library).",
   },
   {
     q: "Where are sound files stored locally?",
@@ -35,6 +35,6 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     q: "What video editing workflows use woven-sfx?",
-    a: "Agents call sfx_resolve during /edit-plan to place transition sounds, then verify the cache with sfx_list_installed before /assemble. Pairings map transitions like pull-in, flash, and glitch to catalog sound ids automatically.",
+    a: "Agents search the catalog with normal words, choose a sound id, then pull the .wav into the project library. Before assembly or render, they verify cached files with sfx_list_installed and pull any missing ids.",
   },
 ];

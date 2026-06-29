@@ -19,6 +19,13 @@ bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh
 
 Sounds land in `./sounds/sfx/` by default, or wherever `sfx-library` points in `.claude/project.md`.
 
+Search and pull sounds from an agent:
+
+```js
+sfx_search({ query: "camera shutter", limit: 5 })
+sfx_pull({ id: "camera-shutter-release" })
+```
+
 **Advanced:** `curl -fsSL https://sfx.woven.video/install.sh | bash` — skill + library + MCP instructions in one shot.
 
 ## Monorepo layout
@@ -30,7 +37,7 @@ woven-sfx/
 ├── apps/
 │   └── web/          # Astro landing page (sfx.woven.video)
 ├── packages/
-│   ├── core/         # Catalog, resolve, pull — shared library
+│   ├── core/         # Catalog search and pull helpers
 │   └── mcp/          # stdio MCP server
 ├── catalog/          # Sound metadata (JSON)
 ├── sounds/           # Source .wav files

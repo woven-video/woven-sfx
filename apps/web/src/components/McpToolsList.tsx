@@ -4,22 +4,17 @@ import { cn } from "@/lib/utils";
 const tools = [
   {
     name: "sfx_search",
-    input: "{ tag?, transition?, query? }",
-    description: "Search the catalog by tag, transition pairing, or query string.",
+    input: "{ query?, tag?, limit? }",
+    description: "Search sounds directly by normal words, sound id, or tag.",
   },
   {
     name: "sfx_pull",
     input: "{ id }",
-    description: "Download a sound by id to ./sounds/sfx/ in your project.",
-  },
-  {
-    name: "sfx_resolve",
-    input: "{ transition, moment? }",
-    description: "Resolve and pull the best sound for a video transition type.",
+    description: "Download a selected sound by id to ./sounds/sfx/ in your project.",
   },
   {
     name: "sfx_list_installed",
-    input: "—",
+    input: "{}",
     description: "List .wav files already cached in the local SFX library.",
   },
 ] as const;

@@ -14,8 +14,13 @@ const steps = [
     code: false,
   },
   {
-    title: "Agent resolves a sound",
-    description: 'sfx_resolve({ transition: "pull-in" })',
+    title: "Agent searches sounds",
+    description: 'sfx_search({ query: "fast whoosh" })',
+    code: true,
+  },
+  {
+    title: "Agent pulls a .wav",
+    description: 'sfx_pull({ id: "fast-whoosh" })',
     code: true,
   },
   {

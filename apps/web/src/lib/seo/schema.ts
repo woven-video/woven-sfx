@@ -67,7 +67,7 @@ export function softwareApplicationSchema(): JsonLd {
       description: "Open source — MIT code, CC0 sounds",
     },
     featureList: [
-      "MCP tools: sfx_search, sfx_pull, sfx_resolve, sfx_list_installed",
+      "MCP tools: sfx_search, sfx_pull, sfx_list_installed",
       "skills.sh installable agent skill",
       "Machine-readable catalog.json",
     ],

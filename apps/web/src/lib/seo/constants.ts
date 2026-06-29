@@ -13,9 +13,9 @@ export const SITE_TITLE = `${SITE_TAGLINE} — ${SITE_NAME}`;
 export const SITE_DESCRIPTION = `Open-source sound effects for AI agents. ${catalog.sounds.length} whooshes, pops, and glitches with MCP tools and a one-command skill install for video edits.`;
 
 export const ANSWER_FIRST =
-  "Woven SFX is an open source library of whooshes, pops, and glitches built for agent video edits. Install the skill and MCP server once. Your agent resolves and pulls the right .wav for every transition.";
+  "Woven SFX is an open source library of whooshes, pops, and glitches built for agent video edits. Install the skill and MCP server once. Your agent searches the catalog with normal words, chooses a sound id, and pulls the right .wav into your project.";
 
 /** Bump when landing copy, catalog, or install flow changes materially. */
-export const SITE_CONTENT_UPDATED = "2026-06-28";
+export const SITE_CONTENT_UPDATED = "2026-06-29";
 
 export const OG_IMAGE_URL = `${SITE_URL}/og-image.png?v=20260629`;
