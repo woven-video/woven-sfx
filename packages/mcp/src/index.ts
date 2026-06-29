@@ -20,7 +20,7 @@ server.registerTool(
   {
     title: "Search sound effects",
     description:
-      "Search Woven SFX directly by normal words, sound id, or tag. Use this first to find sound effects such as beep, camera shutter, glitch, pop, impact, or whoosh.",
+      "Search Woven SFX directly by normal words, sound id, or tag. Call with no arguments to list all available sound effects. Use this first to find sounds such as beep, camera shutter, glitch, pop, impact, or whoosh.",
     inputSchema: z.object({
       query: z.string().optional(),
       tag: z.string().optional(),
