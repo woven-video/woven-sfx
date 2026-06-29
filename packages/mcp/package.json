@@ -19,7 +19,7 @@
     "agent"
   ],
   "bin": {
-    "woven-sfx-mcp": "./dist/bundle.js"
+    "woven-sfx-mcp": "dist/bundle.js"
   },
   "scripts": {
     "build": "tsc",
