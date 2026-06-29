@@ -6,7 +6,7 @@
     "test": "pnpm -r test",
     "build:catalog": "tsx scripts/build-catalog.ts",
     "generate:peaks": "tsx scripts/generate-peaks.ts",
-    "sync:skill": "cp skills/woven-sfx/SKILL.md apps/web/public/skill.md && cp scripts/install.sh apps/web/public/install.sh",
+    "sync:skill": "cp skills/add-sfx/SKILL.md apps/web/public/skill.md && cp scripts/install.sh apps/web/public/install.sh",
     "sync:skills-repo": "bash scripts/sync-skills-repo.sh",
     "r2:cors": "pnpm --dir apps/web exec wrangler r2 bucket cors set woven-sfx --file ../../scripts/r2-cors.json",
     "seed:sounds": "bash scripts/seed-sounds.sh",

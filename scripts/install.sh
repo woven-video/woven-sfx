@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "Installing woven-sfx skill via skills CLI..."
-npx skills add woven-video/skills --skill woven-sfx -g -y < /dev/null
+echo "Installing add-sfx skill via skills CLI..."
+npx skills add woven-video/skills --skill add-sfx -g -y < /dev/null
 
-SKILL_DIR="${HOME}/.agents/skills/woven-sfx"
+SKILL_DIR="${HOME}/.agents/skills/add-sfx"
 PULL_SCRIPT="${SKILL_DIR}/scripts/pull-library.sh"
 
 echo ""
@@ -17,7 +17,7 @@ fi
 
 cat <<'EOF'
 
-✓ Woven SFX skill installed
+✓ add-sfx skill installed (Woven SFX)
 
 Next: add the MCP server (required for sfx_* tools)
 
@@ -36,6 +36,6 @@ Next: add the MCP server (required for sfx_* tools)
 
 Merge into existing mcpServers if needed. Restart your agent.
 
-Full paths: ~/.agents/skills/woven-sfx/references/mcp-setup.md
+Full paths: ~/.agents/skills/add-sfx/references/mcp-setup.md
 Catalog:    https://sfx.woven.video/catalog.json
 EOF

@@ -1,5 +1,5 @@
 ---
-name: woven-sfx
+name: add-sfx
 description: Use when a video edit, motion graphic, app demo, reel, short, animation, or interface needs sound effects, audio cues, whooshes, impacts, beeps, glitches, camera sounds, applause, or local .wav files.
 license: MIT
 compatibility: Requires Node.js, network access to sfx.woven.video, and woven-sfx-mcp MCP server.
@@ -9,9 +9,9 @@ metadata:
   site: https://sfx.woven.video
 ---
 
-# Woven SFX
+# Add SFX
 
-Search and cache Woven sound effects for projects that need local `.wav` files.
+Search and cache Woven SFX sound effects for projects that need local `.wav` files.
 
 ## When To Use
 

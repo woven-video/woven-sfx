@@ -4,7 +4,7 @@ const steps = [
   {
     title: "Install skill",
     description:
-      "npx skills add woven-video/skills --skill woven-sfx — workflow lands in ~/.agents/skills/woven-sfx/",
+      "npx skills add woven-video/skills --skill add-sfx - workflow lands in ~/.agents/skills/add-sfx/",
     code: false,
   },
   {
@@ -31,7 +31,7 @@ const steps = [
 ] as const;
 
 const paths = [
-  { label: "Skill", value: "~/.agents/skills/woven-sfx/" },
+  { label: "Skill", value: "~/.agents/skills/add-sfx/" },
   { label: "MCP", value: "woven-sfx-mcp" },
   { label: "Sounds", value: "./sounds/sfx/" },
 ] as const;
@@ -71,7 +71,7 @@ export default function HowItWorksTimeline({
           <dt className="text-muted-foreground">Registry</dt>
           <dd>
             <a
-              href="https://www.skills.sh/woven-video/skills/woven-sfx"
+              href="https://www.skills.sh/woven-video/skills/add-sfx"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-foreground"
@@ -134,7 +134,7 @@ export default function HowItWorksTimeline({
           <dt className="text-muted-foreground">Registry</dt>
           <dd>
             <a
-              href="https://www.skills.sh/woven-video/skills/woven-sfx"
+              href="https://www.skills.sh/woven-video/skills/add-sfx"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-foreground"

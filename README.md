@@ -2,19 +2,19 @@
 
 Agent-first, open-source sound effects registry for video editing workflows.
 
-**Site:** [sfx.woven.video](https://sfx.woven.video) · **Skill:** [skills.sh/woven-video/skills/woven-sfx](https://skills.sh/woven-video/skills/woven-sfx)
+**Site:** [sfx.woven.video](https://sfx.woven.video) · **Skill:** [skills.sh/woven-video/skills/add-sfx](https://skills.sh/woven-video/skills/add-sfx)
 
 ## Install
 
 ```bash
-npx skills add woven-video/skills --skill woven-sfx -g -y
+npx skills add woven-video/skills --skill add-sfx -g -y
 ```
 
-Then add the MCP server (see `skills/woven-sfx/references/mcp-setup.md`) and pull sounds into your project:
+Then add the MCP server (see `skills/add-sfx/references/mcp-setup.md`) and pull sounds into your project:
 
 ```bash
 cd your-reel-project
-bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh
+bash ~/.agents/skills/add-sfx/scripts/pull-library.sh
 ```
 
 Sounds land in `./sounds/sfx/` by default, or wherever `sfx-library` points in `.claude/project.md`.
@@ -33,7 +33,7 @@ sfx_pull({ id: "camera-shutter-release" })
 ```
 woven-sfx/
 ├── skills/
-│   └── woven-sfx/    # Skill source — sync to woven-video/skills for skills.sh
+│   └── add-sfx/      # Skill source — sync to woven-video/skills for skills.sh
 ├── apps/
 │   └── web/          # Astro landing page (sfx.woven.video)
 ├── packages/

@@ -8,9 +8,9 @@ import McpSetupGuide from "./McpSetupGuide";
 import McpToolsList from "./McpToolsList";
 
 const INSTALL_CMD =
-  "npx skills add woven-video/skills --skill woven-sfx -g -y";
+  "npx skills add woven-video/skills --skill add-sfx -g -y";
 const PULL_CMD =
-  "cd your-project && bash ~/.agents/skills/woven-sfx/scripts/pull-library.sh";
+  "cd your-project && bash ~/.agents/skills/add-sfx/scripts/pull-library.sh";
 const CURL_INSTALL_CMD =
   "curl -fsSL https://sfx.woven.video/install.sh | bash";
 
