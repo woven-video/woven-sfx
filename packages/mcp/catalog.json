@@ -80,11 +80,6 @@
         "camera"
       ],
       "default_volume": 0.4,
-      "pairings": {
-        "transition": [
-          "flash"
-        ]
-      },
       "file": "camera-flash.wav",
       "url": "https://assets.sfx.woven.video/sfx/camera-flash.wav",
       "peaks_url": "/peaks/camera-flash.json"
@@ -146,11 +141,6 @@
         "transition"
       ],
       "default_volume": 0.45,
-      "pairings": {
-        "transition": [
-          "whoosh"
-        ]
-      },
       "file": "deep-whoosh.wav",
       "url": "https://assets.sfx.woven.video/sfx/deep-whoosh.wav",
       "peaks_url": "/peaks/deep-whoosh.json"
@@ -162,12 +152,6 @@
         "glitch"
       ],
       "default_volume": 0.4,
-      "pairings": {
-        "transition": [
-          "glitch",
-          "tv-glitch"
-        ]
-      },
       "file": "dj-scratch.wav",
       "url": "https://assets.sfx.woven.video/sfx/dj-scratch.wav",
       "peaks_url": "/peaks/dj-scratch.json"
@@ -215,12 +199,6 @@
         "transition"
       ],
       "default_volume": 0.45,
-      "pairings": {
-        "transition": [
-          "pull-out",
-          "whoosh"
-        ]
-      },
       "file": "fast-whoosh.wav",
       "url": "https://assets.sfx.woven.video/sfx/fast-whoosh.wav",
       "peaks_url": "/peaks/fast-whoosh.json"
@@ -257,12 +235,6 @@
         "glitch"
       ],
       "default_volume": 0.4,
-      "pairings": {
-        "transition": [
-          "glitch",
-          "tv-glitch"
-        ]
-      },
       "file": "glitch-logo.wav",
       "url": "https://assets.sfx.woven.video/sfx/glitch-logo.wav",
       "peaks_url": "/peaks/glitch-logo.json"
@@ -378,12 +350,6 @@
         "glitch"
       ],
       "default_volume": 0.4,
-      "pairings": {
-        "transition": [
-          "glitch",
-          "tv-glitch"
-        ]
-      },
       "file": "record-needle-scratch.wav",
       "url": "https://assets.sfx.woven.video/sfx/record-needle-scratch.wav",
       "peaks_url": "/peaks/record-needle-scratch.json"
@@ -395,12 +361,6 @@
         "glitch"
       ],
       "default_volume": 0.4,
-      "pairings": {
-        "transition": [
-          "glitch",
-          "tv-glitch"
-        ]
-      },
       "file": "record-scratch.wav",
       "url": "https://assets.sfx.woven.video/sfx/record-scratch.wav",
       "peaks_url": "/peaks/record-scratch.json"
@@ -424,12 +384,6 @@
         "glitch"
       ],
       "default_volume": 0.4,
-      "pairings": {
-        "transition": [
-          "glitch",
-          "tv-glitch"
-        ]
-      },
       "file": "sideways-record-needle.wav",
       "url": "https://assets.sfx.woven.video/sfx/sideways-record-needle.wav",
       "peaks_url": "/peaks/sideways-record-needle.json"
@@ -442,11 +396,6 @@
         "transition"
       ],
       "default_volume": 0.45,
-      "pairings": {
-        "transition": [
-          "pull-in"
-        ]
-      },
       "file": "swish-whoosh-large.wav",
       "url": "https://assets.sfx.woven.video/sfx/swish-whoosh-large.wav",
       "peaks_url": "/peaks/swish-whoosh-large.json"

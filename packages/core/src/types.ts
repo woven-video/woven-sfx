@@ -3,7 +3,6 @@ export type Sound = {
   file: string;
   tags: string[];
   duration_ms: number;
-  pairings?: { transition?: string[]; moment?: string[] };
   default_volume: number;
   url: string;
   peaks_url?: string;

@@ -9,7 +9,7 @@ import {
 } from "@woven-sfx/core";
 import { loadCatalog } from "./catalog-loader.js";
 
-const server = new McpServer({ name: "woven-sfx", version: "0.2.0" });
+const server = new McpServer({ name: "woven-sfx", version: "0.2.1" });
 
 function textResult(obj: unknown) {
   return { content: [{ type: "text" as const, text: JSON.stringify(obj, null, 2) }] };

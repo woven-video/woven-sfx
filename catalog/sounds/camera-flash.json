@@ -5,10 +5,5 @@
     "pop",
     "camera"
   ],
-  "default_volume": 0.4,
-  "pairings": {
-    "transition": [
-      "flash"
-    ]
-  }
+  "default_volume": 0.4
 }

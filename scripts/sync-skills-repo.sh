@@ -22,4 +22,4 @@ rm -rf "$OLD_DEST"
 chmod +x "$DEST/scripts/pull-library.sh"
 
 echo "Synced skill → $DEST"
-echo "Next: cd $SKILLS_REPO && git add skills/add-sfx skills/woven-sfx README.md && git commit && git push"
+echo "Next: cd $SKILLS_REPO && git add -A skills README.md && git commit && git push"

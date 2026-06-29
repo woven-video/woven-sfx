@@ -5,11 +5,5 @@
     "whoosh",
     "transition"
   ],
-  "default_volume": 0.45,
-  "pairings": {
-    "transition": [
-      "pull-out",
-      "whoosh"
-    ]
-  }
+  "default_volume": 0.45
 }
