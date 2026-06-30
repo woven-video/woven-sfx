@@ -7,6 +7,8 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  site: "https://www.woven.video",
+  base: "/sfx",
   output: "static",
   integrations: [react()],
   vite: {
