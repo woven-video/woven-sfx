@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CDN="${SFX_CDN_BASE:-https://sfx.woven.video}"
+CDN="${SFX_CDN_BASE:-https://www.woven.video/sfx}"
 
 expand_home() {
   local p="$1"

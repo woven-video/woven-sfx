@@ -9,7 +9,10 @@ const OUT_PATHS = [
 const SFX_ASSET_BASE_URL =
   process.env.SFX_ASSET_BASE_URL ?? "https://assets.sfx.woven.video";
 const SFX_SITE_URL =
-  process.env.SFX_SITE_URL ?? "https://www.woven.video/sfx";
+  (process.env.SFX_SITE_URL ?? "https://www.woven.video/sfx").replace(
+    /\/+$/,
+    "",
+  );
 
 async function main() {
   const files = (await readdir(SOUNDS_DIR)).filter((f) => f.endsWith(".json"));

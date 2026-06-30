@@ -8,7 +8,7 @@
     "url": "git+https://github.com/woven-video/woven-sfx.git",
     "directory": "packages/mcp"
   },
-  "homepage": "https://sfx.woven.video",
+  "homepage": "https://www.woven.video/sfx",
   "bugs": "https://github.com/woven-video/woven-sfx/issues",
   "license": "MIT",
   "keywords": [

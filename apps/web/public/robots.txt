@@ -41,4 +41,4 @@ User-agent: DuckDuckBot
 Allow: /
 
 Sitemap: https://www.woven.video/sfx/sitemap.xml
-Host: https://www.woven.video/sfx
+Host: www.woven.video

@@ -68,5 +68,5 @@ Next: add the MCP server (required for sfx_* tools)
 Merge into existing mcpServers if needed. Restart your agent.
 
 Full paths: ./.agents/skills/add-sfx/references/mcp-setup.md
-Catalog:    https://sfx.woven.video/catalog.json
+Catalog:    https://www.woven.video/sfx/catalog.json
 EOF
