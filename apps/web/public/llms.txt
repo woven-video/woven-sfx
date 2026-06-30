@@ -1,5 +1,5 @@
 # Woven SFX
-> Woven SFX is an open-source sound effects registry for AI agents — one skill install, MCP tools to search and pull .wav files, and a browsable catalog at sfx.woven.video.
+> Woven SFX is an open-source sound effects registry for AI agents — one skill install, MCP tools to search and pull .wav files, and a browsable catalog at www.woven.video/sfx.
 
 ## Install
 npx skills add woven-video/skills --skill add-sfx
@@ -20,7 +20,7 @@ Sounds: cd your-project && bash ./.agents/skills/add-sfx/scripts/pull-library.sh
 3. ./sounds/sfx/ under cwd
 
 ## Catalog
-https://sfx.woven.video/catalog.json
+https://www.woven.video/sfx/catalog.json
 
 ## MCP tools
 sfx_search, sfx_pull, sfx_list_installed

@@ -1,6 +1,6 @@
 import catalog from "../../../public/catalog.json";
 
-export const SITE_URL = "https://sfx.woven.video";
+export const SITE_URL = "https://www.woven.video/sfx";
 export const SITE_NAME = "Woven SFX";
 export const PARENT_ORG_URL = "https://www.woven.video";
 export const PARENT_ORG_NAME = "Woven";

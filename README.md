@@ -2,7 +2,7 @@
 
 Agent-first, open-source sound effects registry for video editing workflows.
 
-**Site:** [sfx.woven.video](https://sfx.woven.video) · **Skill:** [skills.sh/woven-video/skills/add-sfx](https://skills.sh/woven-video/skills/add-sfx)
+**Site:** [www.woven.video/sfx](https://www.woven.video/sfx) · **Skill:** [skills.sh/woven-video/skills/add-sfx](https://skills.sh/woven-video/skills/add-sfx)
 
 ## Install
 
@@ -26,7 +26,7 @@ sfx_search({ query: "camera shutter", limit: 5 })
 sfx_pull({ id: "camera-shutter-release" })
 ```
 
-**Advanced:** `curl -fsSL https://sfx.woven.video/install.sh | bash` — skill + library + MCP instructions in one shot.
+**Advanced:** `curl -fsSL https://www.woven.video/sfx/install.sh | bash` — skill + library + MCP instructions in one shot.
 
 ## Monorepo layout
 
@@ -35,7 +35,7 @@ woven-sfx/
 ├── skills/
 │   └── add-sfx/      # Skill source — sync to woven-video/skills for skills.sh
 ├── apps/
-│   └── web/          # Astro landing page (sfx.woven.video)
+│   └── web/          # Astro SFX app mounted at www.woven.video/sfx
 ├── packages/
 │   ├── core/         # Catalog search and pull helpers
 │   └── mcp/          # stdio MCP server
@@ -113,7 +113,7 @@ pnpm install
 pnpm deploy
 ```
 
-`pnpm preview` builds and runs `wrangler dev` locally. After deploy, point DNS `sfx.woven.video` at the Workers subdomain from the wrangler output (CNAME).
+`pnpm preview` builds and runs `wrangler dev` locally. After deploy, route the SFX app through `www.woven.video/sfx`; keep the old landing host configured as a redirect.
 
 ### Sound files (R2)
 

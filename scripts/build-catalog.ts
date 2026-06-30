@@ -8,6 +8,8 @@ const OUT_PATHS = [
 ];
 const SFX_ASSET_BASE_URL =
   process.env.SFX_ASSET_BASE_URL ?? "https://assets.sfx.woven.video";
+const SFX_SITE_URL =
+  process.env.SFX_SITE_URL ?? "https://www.woven.video/sfx";
 
 async function main() {
   const files = (await readdir(SOUNDS_DIR)).filter((f) => f.endsWith(".json"));
@@ -19,7 +21,7 @@ async function main() {
         ...sound,
         file: sound.file ?? `${sound.id}.wav`,
         url: sound.url ?? `${SFX_ASSET_BASE_URL}/sfx/${sound.id}.wav`,
-        peaks_url: sound.peaks_url ?? `/peaks/${sound.id}.json`,
+        peaks_url: sound.peaks_url ?? `${SFX_SITE_URL}/peaks/${sound.id}.json`,
       };
     }),
   );

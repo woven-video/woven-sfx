@@ -27,7 +27,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     q: "How many sounds are in the Woven SFX catalog?",
-    a: `The catalog at sfx.woven.video/catalog.json currently lists ${soundCount} sounds (catalog v${catalogVersion}), including whooshes, camera shutters, glitches, dings, and impacts. New sounds are added to the open registry over time.`,
+    a: `The catalog at www.woven.video/sfx/catalog.json currently lists ${soundCount} sounds (catalog v${catalogVersion}), including whooshes, camera shutters, glitches, dings, and impacts. New sounds are added to the open registry over time.`,
   },
   {
     q: "Is Woven SFX free?",
