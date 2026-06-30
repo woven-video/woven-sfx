@@ -5,13 +5,14 @@ import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import Hero from "../components/Hero.astro";
 import CatalogSection from "../components/CatalogSection.tsx";
+import { withSiteBase } from "../lib/site-paths";
 ---
 
 <html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/icon.png" type="image/png" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href={withSiteBase("/icon.png")} type="image/png" />
+    <link rel="icon" href={withSiteBase("/favicon.ico")} sizes="any" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#252525" />

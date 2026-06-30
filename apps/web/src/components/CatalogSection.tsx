@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Input } from "@/components/ui/input";
+import { withSiteBase } from "@/lib/site-paths";
 import SfxCard, { type Sound } from "./SfxCard";
 
 type Catalog = {
@@ -29,7 +30,7 @@ export default function CatalogSection() {
   const searchRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    fetch("/catalog.json")
+    fetch(withSiteBase("/catalog.json"))
       .then((response) => response.json() as Promise<Catalog>)
       .then((catalog) => setSounds(catalog.sounds))
       .catch(() => setSounds([]));

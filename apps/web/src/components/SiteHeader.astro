@@ -1,4 +1,6 @@
 ---
+import { withSiteBase } from "../lib/site-paths";
+
 const externalLinkClass =
   "inline-flex items-center gap-1 transition-colors hover:text-foreground";
 ---
@@ -9,9 +11,13 @@ const externalLinkClass =
   <div
     class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-3"
   >
-    <a href="/" class="flex items-center gap-2" aria-label="Woven SFX home">
+    <a
+      href={withSiteBase("/")}
+      class="flex items-center gap-2"
+      aria-label="Woven SFX home"
+    >
       <img
-        src="/woven-logo.png"
+        src={withSiteBase("/woven-logo.png")}
         alt=""
         width="28"
         height="28"
@@ -21,7 +27,7 @@ const externalLinkClass =
     </a>
     <nav class="flex items-center gap-7 text-sm text-muted-foreground">
       <a
-        href="https://woven.video"
+        href="https://www.woven.video"
         target="_blank"
         rel="noopener noreferrer"
         class={externalLinkClass}

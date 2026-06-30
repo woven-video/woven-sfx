@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
+import { withSiteBase } from "@/lib/site-paths";
+
 type SfxWaveformProps = {
   id: string;
   durationMs: number;
@@ -75,7 +77,7 @@ export default function SfxWaveform({
     let cancelled = false;
     setPeaks(null);
 
-    fetch(`/peaks/${id}.json`)
+    fetch(withSiteBase(`/peaks/${id}.json`))
       .then((response) => {
         if (!response.ok) {
           throw new Error("Peaks not found");
