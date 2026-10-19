@@ -65,6 +65,32 @@ export default function SfxCard({
     }
   }, [isPlaying, onFinish]);
 
+  // The WAV is served from another origin, where the `download` attribute is
+  // ignored. Fetch it as a blob so the browser saves it; if that fails, let the
+  // plain link navigate to the file.
+  const handleDownload = useCallback(
+    async (event: React.MouseEvent<HTMLAnchorElement>) => {
+      event.preventDefault();
+      try {
+        const response = await fetch(sound.url);
+        if (!response.ok) {
+          throw new Error(`Download failed: ${response.status}`);
+        }
+        const objectUrl = URL.createObjectURL(await response.blob());
+        const link = document.createElement("a");
+        link.href = objectUrl;
+        link.download = sound.file;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+      } catch {
+        window.location.assign(sound.url);
+      }
+    },
+    [sound.file, sound.url],
+  );
+
   const metadata = [
     isPlaying ? "Playing" : formatDuration(sound.duration_ms),
     ...sound.tags,
@@ -121,6 +147,7 @@ export default function SfxCard({
             <a
               href={sound.url}
               download={sound.file}
+              onClick={handleDownload}
               className={cn(
                 buttonVariants({ variant: "outline", size: "sm" }),
                 "shrink-0 gap-1.5",
