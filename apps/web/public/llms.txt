@@ -27,3 +27,15 @@ sfx_search, sfx_pull, sfx_list_installed
 
 ## Skill
 ./.agents/skills/add-sfx/SKILL.md
+
+## Sound pages
+https://www.woven.video/sfx/ding-sound-effect
+https://www.woven.video/sfx/boom-sound-effect
+https://www.woven.video/sfx/record-scratch-sound-effect
+https://www.woven.video/sfx/click-sound-effect
+https://www.woven.video/sfx/whoosh-sound-effect
+https://www.woven.video/sfx/camera-shutter-sound-effect
+https://www.woven.video/sfx/applause-sound-effect
+https://www.woven.video/sfx/pop-sound-effect
+https://www.woven.video/sfx/gasp-sound-effect
+https://www.woven.video/sfx/keyboard-typing-sound-effect

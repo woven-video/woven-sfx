@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { PauseIcon, PlayIcon } from "lucide-react";
+import { DownloadIcon, PauseIcon, PlayIcon } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import CopyButton from "./CopyButton";
@@ -22,6 +22,8 @@ type SfxCardProps = {
   isPlaying: boolean;
   onPlay: (id: string) => void;
   onFinish: () => void;
+  /** Show a WAV download button next to the play button. */
+  downloadable?: boolean;
 };
 
 function formatDuration(ms: number): string {
@@ -38,6 +40,7 @@ export default function SfxCard({
   isPlaying,
   onPlay,
   onFinish,
+  downloadable = false,
 }: SfxCardProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [audioEl, setAudioEl] = useState<HTMLAudioElement | null>(null);
@@ -113,6 +116,21 @@ export default function SfxCard({
               height={40}
             />
           </div>
+
+          {downloadable ? (
+            <a
+              href={sound.url}
+              download={sound.file}
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" }),
+                "shrink-0 gap-1.5",
+              )}
+              aria-label={`Download ${sound.file}`}
+            >
+              <DownloadIcon />
+              WAV
+            </a>
+          ) : null}
         </div>
       </CardContent>
 

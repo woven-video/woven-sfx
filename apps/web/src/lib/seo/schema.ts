@@ -12,6 +12,11 @@ import {
   SITE_URL,
 } from "./constants";
 import type { FaqItem } from "./faqs";
+import {
+  AUDIO_LICENSE_URL,
+  isoDuration,
+  soundDisplayName,
+} from "../sound-pages";
 
 type JsonLd = Record<string, unknown>;
 
@@ -152,5 +157,88 @@ export function homePageGraph(faqs: FaqItem[]) {
     datasetSchema(),
     webPageSchema(),
     faqPageSchema(faqs),
+  );
+}
+
+type SoundPageGraphInput = {
+  url: string;
+  title: string;
+  description: string;
+  name: string;
+  h1: string;
+  faqs: FaqItem[];
+  sounds: {
+    id: string;
+    url: string;
+    duration_ms: number;
+    tags: string[];
+  }[];
+};
+
+/** JSON-LD graph for a sound-type landing page (WebPage, breadcrumbs, FAQs, one AudioObject per sound). */
+export function soundPageGraph(page: SoundPageGraphInput) {
+  const pageId = `${page.url}#webpage`;
+
+  return jsonLdGraph(
+    {
+      "@type": "WebPage",
+      "@id": pageId,
+      url: page.url,
+      name: page.title,
+      description: page.description,
+      inLanguage: "en-US",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: SITE_NAME,
+      },
+      publisher: {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: PARENT_ORG_NAME,
+        url: PARENT_ORG_URL,
+      },
+      breadcrumb: { "@id": `${page.url}#breadcrumb` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${page.url}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: SITE_NAME,
+          item: SITE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: page.h1,
+          item: page.url,
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${page.url}#faq`,
+      mainEntity: page.faqs.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    },
+    ...page.sounds.map((sound) => ({
+      "@type": "AudioObject",
+      "@id": `${page.url}#${sound.id}`,
+      name: `${soundDisplayName(sound.id)} sound effect`,
+      contentUrl: sound.url,
+      encodingFormat: "audio/wav",
+      duration: isoDuration(sound.duration_ms),
+      license: AUDIO_LICENSE_URL,
+      isAccessibleForFree: true,
+      keywords: sound.tags.join(", "),
+      isPartOf: { "@id": pageId },
+    })),
   );
 }

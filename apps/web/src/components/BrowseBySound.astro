@@ -1,0 +1,27 @@
+---
+import { withSiteBase } from "../lib/site-paths";
+import { soundPages } from "../lib/sound-pages";
+---
+
+<section class="mx-auto max-w-6xl px-6 pt-5 md:pt-6" aria-labelledby="browse-by-sound">
+  <h2
+    id="browse-by-sound"
+    class="text-sm font-medium text-muted-foreground"
+  >
+    Browse by sound
+  </h2>
+  <ul class="mt-3 flex flex-wrap gap-2">
+    {
+      soundPages.map((page) => (
+        <li>
+          <a
+            href={withSiteBase(`/${page.slug}`)}
+            class="inline-flex rounded-full bg-card px-3.5 py-1.5 text-sm text-foreground ring-1 ring-border transition-colors hover:bg-muted"
+          >
+            {page.name.charAt(0).toUpperCase() + page.name.slice(1)}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

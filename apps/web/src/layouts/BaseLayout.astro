@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+import SeoHead from "../components/SeoHead.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { withSiteBase } from "../lib/site-paths";
+
+type SeoProps = Parameters<typeof SeoHead>[0];
+
+interface Props {
+  seo?: SeoProps;
+}
+
+const { seo = {} } = Astro.props;
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href={withSiteBase("/icon.png")} type="image/png" />
+    <link rel="icon" href={withSiteBase("/favicon.ico")} sizes="any" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#252525" />
+    <meta name="color-scheme" content="dark" />
+    <SeoHead {...seo} />
+  </head>
+  <body class="flex min-h-screen flex-col bg-background text-foreground antialiased">
+    <SiteHeader />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>
