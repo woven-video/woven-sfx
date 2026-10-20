@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { PauseIcon, PlayIcon } from "lucide-react";
+import { DownloadIcon, PauseIcon, PlayIcon } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import CopyButton from "./CopyButton";
@@ -22,6 +22,8 @@ type SfxCardProps = {
   isPlaying: boolean;
   onPlay: (id: string) => void;
   onFinish: () => void;
+  /** Show a WAV download button next to the play button. */
+  downloadable?: boolean;
 };
 
 function formatDuration(ms: number): string {
@@ -38,6 +40,7 @@ export default function SfxCard({
   isPlaying,
   onPlay,
   onFinish,
+  downloadable = false,
 }: SfxCardProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [audioEl, setAudioEl] = useState<HTMLAudioElement | null>(null);
@@ -61,6 +64,32 @@ export default function SfxCard({
       audio.currentTime = 0;
     }
   }, [isPlaying, onFinish]);
+
+  // The WAV is served from another origin, where the `download` attribute is
+  // ignored. Fetch it as a blob so the browser saves it; if that fails, let the
+  // plain link navigate to the file.
+  const handleDownload = useCallback(
+    async (event: React.MouseEvent<HTMLAnchorElement>) => {
+      event.preventDefault();
+      try {
+        const response = await fetch(sound.url);
+        if (!response.ok) {
+          throw new Error(`Download failed: ${response.status}`);
+        }
+        const objectUrl = URL.createObjectURL(await response.blob());
+        const link = document.createElement("a");
+        link.href = objectUrl;
+        link.download = sound.file;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+      } catch {
+        window.location.assign(sound.url);
+      }
+    },
+    [sound.file, sound.url],
+  );
 
   const metadata = [
     isPlaying ? "Playing" : formatDuration(sound.duration_ms),
@@ -113,6 +142,22 @@ export default function SfxCard({
               height={40}
             />
           </div>
+
+          {downloadable ? (
+            <a
+              href={sound.url}
+              download={sound.file}
+              onClick={handleDownload}
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" }),
+                "shrink-0 gap-1.5",
+              )}
+              aria-label={`Download ${sound.file}`}
+            >
+              <DownloadIcon />
+              WAV
+            </a>
+          ) : null}
         </div>
       </CardContent>
 

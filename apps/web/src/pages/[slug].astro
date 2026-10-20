@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SoundList from "../components/SoundList.tsx";
+import { soundPageGraph } from "../lib/seo/schema";
+import { withSiteBase } from "../lib/site-paths";
+import {
+  GUIDE_URL,
+  INSTALL_SKILL_CMD,
+  soundPages,
+  type SoundPage,
+} from "../lib/sound-pages";
+
+export function getStaticPaths() {
+  return soundPages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+interface Props {
+  page: SoundPage;
+}
+
+const { page } = Astro.props;
+const { startingVolume } = page;
+
+const seo = {
+  title: page.title,
+  description: page.description,
+  canonical: page.url,
+  jsonLd: soundPageGraph(page),
+};
+
+const sectionHeading =
+  "text-2xl font-semibold tracking-[-0.025em] leading-[1.05] md:text-3xl";
+const codeBlock =
+  "overflow-x-auto rounded-xl bg-muted/60 px-4 py-3 font-mono text-sm ring-1 ring-border/60 [font-variant-ligatures:none]";
+const linkClass =
+  "text-foreground underline underline-offset-4 decoration-border hover:decoration-foreground";
+---
+
+<BaseLayout seo={seo}>
+  <article>
+    <header class="border-b border-border/60">
+      <div class="mx-auto max-w-6xl px-6 py-6 md:py-8">
+        <nav aria-label="Breadcrumb" class="text-sm text-muted-foreground">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li>
+              <a href={withSiteBase("/")} class="hover:text-foreground">
+                Woven SFX library
+              </a>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="text-foreground">{page.h1}</li>
+          </ol>
+        </nav>
+        <h1
+          class="mt-4 text-4xl font-semibold tracking-normal leading-[0.98] text-balance md:text-5xl lg:text-6xl"
+        >
+          {page.h1}
+        </h1>
+        <p
+          id="summary"
+          class="mt-4 max-w-3xl text-base leading-[1.5] text-muted-foreground md:text-lg"
+        >
+          {page.answer}
+        </p>
+        <p class="mt-3 font-mono text-sm text-muted-foreground">
+          {page.glance}
+        </p>
+      </div>
+    </header>
+
+    <section class="mx-auto max-w-6xl px-6 py-6 md:py-8" aria-labelledby="sounds-heading">
+      <h2 id="sounds-heading" class={`mb-5 ${sectionHeading}`}>
+        {page.sounds.length} free {page.name} sounds
+      </h2>
+      <SoundList sounds={page.sounds} client:load />
+    </section>
+
+    <section class="mx-auto max-w-6xl px-6 py-6 md:py-8" aria-labelledby="when-heading">
+      <h2 id="when-heading" class={`mb-4 ${sectionHeading}`}>
+        When to use a {page.name} sound in a video
+      </h2>
+      <ul class="max-w-3xl list-disc space-y-3 pl-5 text-base leading-[1.5] text-muted-foreground marker:text-border">
+        {page.whenToUse.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-6 py-6 md:py-8" aria-labelledby="edit-heading">
+      <h2 id="edit-heading" class={`mb-4 ${sectionHeading}`}>
+        Use it in your edit
+      </h2>
+      <div class="max-w-3xl space-y-6 text-base leading-[1.5] text-muted-foreground">
+        <div>
+          <h3 class="mb-1 text-base font-medium text-foreground">
+            In any editor
+          </h3>
+          <p>
+            Press the WAV button on a card to download the file, then place it
+            on an audio track in your editor. Line the start of the sound up
+            with the frame where the action happens. The catalog lists a
+            default volume of {startingVolume.volume} for {startingVolume.id}{" "}
+            as a starting gain; change it only if the mix needs it.
+          </p>
+        </div>
+        <div>
+          <h3 class="mb-1 text-base font-medium text-foreground">
+            With an AI agent
+          </h3>
+          <p class="mb-3">
+            Install the skill, add the woven-sfx-mcp server to your agent
+            (<a href={withSiteBase("/#install")} class={linkClass}>setup steps</a>),
+            then have the agent search and pull by id.
+          </p>
+          <pre class={codeBlock}><code>{INSTALL_SKILL_CMD}
+sfx_search({`{ query: "${page.name}", limit: 5 }`})
+sfx_pull({`{ id: "${startingVolume.id}" }`})</code></pre>
+        </div>
+        <p>
+          Want the full workflow? Read{" "}
+          <a href={GUIDE_URL} class={linkClass}>how to add sound effects to a video</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-6 py-6 md:py-8" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class={`mb-4 ${sectionHeading}`}>
+        {page.name.charAt(0).toUpperCase() + page.name.slice(1)} sound effect FAQ
+      </h2>
+      <dl class="max-w-3xl space-y-5">
+        {
+          page.faqs.map((faq) => (
+            <div>
+              <dt class="text-base font-medium text-foreground">{faq.q}</dt>
+              <dd class="mt-1 text-base leading-[1.5] text-muted-foreground">
+                {faq.a}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-6 py-6 md:py-8" aria-labelledby="related-heading">
+      <h2 id="related-heading" class={`mb-4 ${sectionHeading}`}>
+        Related sound effects
+      </h2>
+      <ul class="flex flex-wrap gap-3">
+        {
+          page.relatedPages.map((related) => (
+            <li>
+              <a
+                href={withSiteBase(`/${related.slug}`)}
+                class="inline-flex rounded-xl bg-card px-4 py-2 text-sm text-foreground ring-1 ring-border transition-colors hover:bg-muted"
+              >
+                {related.h1}
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a
+            href={withSiteBase("/")}
+            class="inline-flex rounded-xl px-4 py-2 text-sm text-muted-foreground ring-1 ring-border transition-colors hover:text-foreground"
+          >
+            Browse all sounds
+          </a>
+        </li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>
