@@ -95,6 +95,15 @@ export function datasetSchema(): JsonLd {
       encodingFormat: "application/json",
       contentUrl: `${SITE_URL}/catalog.json`,
     },
+    // Google's Dataset rich result requires a creator; Search Console flagged it as missing.
+    // Typed and named inline so it validates on its own, and the @id merges it with the
+    // Organization node in the same graph.
+    creator: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: PARENT_ORG_NAME,
+      url: PARENT_ORG_URL,
+    },
     publisher: { "@id": `${SITE_URL}/#organization` },
   };
 }
